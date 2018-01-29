@@ -1,10 +1,10 @@
-/************************************************
-* Name of file:                                 *
-* Author:                                       *
-* Short description of file/function:           *
-*                                               *
-*                                               *
-*                                               *
-* Date of last edit and by whom:                *
-* Any conflicts?                                *
-************************************************/
+/************************************************************
+* Name of file:                                             *
+* Filetype:(class, main, script, subclass, abstractclass)   *
+*                                                           *
+* Short description of class/file:                          *
+*                                                           *
+*                                                           *
+*                                                           *
+* Github conflict status:                                   *
+************************************************************/
