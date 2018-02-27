@@ -311,6 +311,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AiScript.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\MousePlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PuckScript.cs" />

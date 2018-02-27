@@ -1154,6 +1154,7 @@ GameObject:
   - component: {fileID: 992963310}
   - component: {fileID: 992963309}
   - component: {fileID: 992963308}
+  - component: {fileID: 992963313}
   - component: {fileID: 992963312}
   - component: {fileID: 992963311}
   m_Layer: 0
@@ -1169,7 +1170,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 992963307}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b371d665e4613a42b2f036f10e20d38, type: 3}
   m_Name: 
@@ -1268,6 +1269,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
+--- !u!114 &992963313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 992963307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22d6ff9f5ccbbd41ab95be9e0910af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundaryHolder: {fileID: 2080133902}
 --- !u!1 &1011445540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1326,7 @@ GameObject:
   - component: {fileID: 1096184145}
   - component: {fileID: 1096184147}
   - component: {fileID: 1096184148}
+  - component: {fileID: 1096184149}
   m_Layer: 0
   m_Name: PlayerBlue
   m_TagString: Untagged
@@ -1433,13 +1447,25 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096184142}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b371d665e4613a42b2f036f10e20d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BoundaryHolder: {fileID: 1406047951}
   Controller: {fileID: 1588985010}
+--- !u!114 &1096184149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1096184142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22d6ff9f5ccbbd41ab95be9e0910af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundaryHolder: {fileID: 1406047951}
 --- !u!1 &1174433337
 GameObject:
   m_ObjectHideFlags: 0
