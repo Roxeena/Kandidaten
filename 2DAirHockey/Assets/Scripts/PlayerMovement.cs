@@ -1,21 +1,25 @@
 ﻿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     bool wasJustClicked = true;
     bool canMove;
 
     Rigidbody2D rb;
+    Vector2 startingPosition;
 
     public Transform BoundaryHolder;
 
     Boundary playerBoundary;
-        
+
     Collider2D playerCollider;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
+        startingPosition = rb.position;
         playerCollider = GetComponent<Collider2D>();
 
         playerBoundary = new Boundary(BoundaryHolder.GetChild(0).position.y,
@@ -24,10 +28,11 @@ public class PlayerMovement : MonoBehaviour {
                                       BoundaryHolder.GetChild(3).position.x);
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButton(0))
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -35,7 +40,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 wasJustClicked = false;
 
-                if(playerCollider.OverlapPoint(mousePos))
+                if (playerCollider.OverlapPoint(mousePos))
                 {
                     canMove = true;
                 }
@@ -58,5 +63,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             wasJustClicked = true;
         }
-	}
+    }
+
+    public void ResetPosition()
+    {
+        rb.position = startingPosition;
+    }
 }

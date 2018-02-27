@@ -58,6 +58,11 @@ public class PuckScript : MonoBehaviour
             rb.position = new Vector2(0, 1);
     }
 
+    public void CenterPuck()
+    {
+        rb.position = new Vector2(0, 0);
+    }
+
     private void FixedUpdate()
     {
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, MaxSpeed);

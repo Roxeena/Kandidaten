@@ -6,6 +6,8 @@ TagManager:
   tags:
   - AiGoal
   - PlayerGoal
+  - CanvasGame
+  - CanvasRestart
   layers:
   - Default
   - TransparentFX
