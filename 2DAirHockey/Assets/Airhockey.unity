@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoundaryHolder: {fileID: 2080133902}
+  Controller: {fileID: 1588985010}
 --- !u!212 &992963309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1417,7 +1418,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096184142}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c492c91823ce17f4ba70ae1393ce8082, type: 3}
   m_Name: 
@@ -1438,6 +1439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoundaryHolder: {fileID: 1406047951}
+  Controller: {fileID: 1588985010}
 --- !u!1 &1174433337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1841,7 @@ GameObject:
   - component: {fileID: 1588985008}
   - component: {fileID: 1588985009}
   - component: {fileID: 1588985007}
+  - component: {fileID: 1588985010}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1989,6 +1992,18 @@ MonoBehaviour:
   puckScript: {fileID: 1298670008}
   playerMovement: {fileID: 992963308}
   aiScript: {fileID: 1096184147}
+--- !u!114 &1588985010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1588985004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de158e1dbc72d64380634b5339d5dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Players: []
 --- !u!1 &1605161763
 GameObject:
   m_ObjectHideFlags: 0
