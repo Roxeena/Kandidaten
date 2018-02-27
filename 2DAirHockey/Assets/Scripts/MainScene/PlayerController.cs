@@ -7,6 +7,44 @@ public class PlayerController : MonoBehaviour
 
     public List<PlayerMovement> Players = new List<PlayerMovement>();
 
+    public GameObject AiPlayer;
+    public GameObject Player;
+
+    private void Start()
+    {
+        if (GameValues.IsMultiplayer)
+        {
+            AiPlayer.GetComponent<PlayerMovement>().enabled = true;
+            AiPlayer.GetComponent<AiScript>().enabled = false;
+        }
+        else
+        {
+            AiPlayer.GetComponent<PlayerMovement>().enabled = false;
+            AiPlayer.GetComponent<AiScript>().enabled = true;
+        }
+
+        if (GameValues.IsMouse)
+        {
+            AiPlayer.GetComponent<PlayerMovement>().enabled = false;
+            AiPlayer.GetComponent<MousePlayerMovement>().enabled = true;
+            Player.GetComponent<PlayerMovement>().enabled = false;
+            Player.GetComponent<MousePlayerMovement>().enabled = true;
+        }
+        else
+        {
+            AiPlayer.GetComponent<PlayerMovement>().enabled = true;
+            AiPlayer.GetComponent<MousePlayerMovement>().enabled = false;
+            Player.GetComponent<PlayerMovement>().enabled = true;
+            Player.GetComponent<MousePlayerMovement>().enabled = false;
+
+        }
+    }
+
+   
+    
+     
+    
+
     // Update is called once per frame
     void Update()
     {
