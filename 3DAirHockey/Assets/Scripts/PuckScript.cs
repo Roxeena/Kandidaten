@@ -13,6 +13,8 @@ public class PuckScript : MonoBehaviour {
     public Collider Divider;
     private Collider PuckCol;
 
+    public AudioManager audioManager;
+
     // Use this for initialization
 	void Start () {
         puck = GetComponent<Rigidbody>();
@@ -34,6 +36,7 @@ public class PuckScript : MonoBehaviour {
                 Debug.Log("Blue");
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerBlueScore);
                 WasGoal = true;
+                audioManager.PlayGoal();
                 StartCoroutine(ResetPuck(false));
             }
             else if(goal.tag == "RedGoal")
@@ -41,10 +44,16 @@ public class PuckScript : MonoBehaviour {
                 Debug.Log("Red");
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerRedScore);
                 WasGoal = true;
+                audioManager.PlayGoal();
                 StartCoroutine(ResetPuck(true));
 
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        audioManager.PlayPuckCollision();
     }
 
     private IEnumerator ResetPuck(bool didPlayerRedScore)
