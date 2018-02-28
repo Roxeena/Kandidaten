@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuckScript : MonoBehaviour
+public class PuckScript : MonoBehaviour, IResettable
 {
 
     public ScoreScript ScoreScriptInstance;
@@ -18,6 +18,7 @@ public class PuckScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         WasGoal = false;
+        UiManager.Instance.ResetableGameObjects.Add(this);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -58,7 +59,7 @@ public class PuckScript : MonoBehaviour
             rb.position = new Vector2(0, 1);
     }
 
-    public void CenterPuck()
+    public void ResetPosition()
     {
         rb.position = new Vector2(0, 0);
     }

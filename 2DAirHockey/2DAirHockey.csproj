@@ -320,6 +320,7 @@
     <Compile Include="Assets\Scripts\MainScene\UiManager.cs" />
     <Compile Include="Assets\Scripts\MenuScene\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Types\Boundary.cs" />
+    <Compile Include="Assets\Scripts\Types\IResettable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
