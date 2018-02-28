@@ -11,14 +11,16 @@ public class PuckScript : MonoBehaviour {
     public Collider GoalRed;
     public Collider GoalBlue;
     public Collider Divider;
+    private Collider PuckCol;
 
     // Use this for initialization
 	void Start () {
         puck = GetComponent<Rigidbody>();
+        PuckCol = puck.GetComponent<Collider>();
         WasGoal = false;
-        Physics.IgnoreCollision(GoalRed, puck.GetComponent<Collider>());
-        Physics.IgnoreCollision(GoalBlue, puck.GetComponent<Collider>());
-        Physics.IgnoreCollision(Divider, puck.GetComponent<Collider>());
+        Physics.IgnoreCollision(GoalRed, PuckCol);
+        Physics.IgnoreCollision(GoalBlue, PuckCol);
+        Physics.IgnoreCollision(Divider, PuckCol);
     }
 
     private void OnTriggerEnter(Collider goal)
