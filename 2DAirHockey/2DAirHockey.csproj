@@ -309,14 +309,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AiScript.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\PuckScript.cs" />
-    <Compile Include="Assets\Scripts\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\GameValues.cs" />
+    <Compile Include="Assets\Scripts\MainScene\AiScript.cs" />
+    <Compile Include="Assets\Scripts\MainScene\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\MainScene\MousePlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\MainScene\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\MainScene\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\MainScene\PuckScript.cs" />
+    <Compile Include="Assets\Scripts\MainScene\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\MainScene\UiManager.cs" />
+    <Compile Include="Assets\Scripts\MenuScene\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Types\Boundary.cs" />
-    <Compile Include="Assets\Scripts\UiManager.cs" />
+    <Compile Include="Assets\Scripts\Types\IResettable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
