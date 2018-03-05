@@ -1767,7 +1767,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 9227995786ece6949a20a7d13363879c, type: 2}
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreScriptInstance: {fileID: 1588985005}
-  MaxSpeed: 20
+  MaxSpeed: 15
   audioManager: {fileID: 1588985008}
 --- !u!1 &1333057793
 GameObject:
@@ -2211,9 +2211,6 @@ MonoBehaviour:
   LooseTxt: {fileID: 850080626}
   audioManager: {fileID: 1588985008}
   scoreScript: {fileID: 1588985005}
-  puckScript: {fileID: 1298670008}
-  playerMovement: {fileID: 992963308}
-  aiScript: {fileID: 1096184147}
 --- !u!114 &1588985010
 MonoBehaviour:
   m_ObjectHideFlags: 0
