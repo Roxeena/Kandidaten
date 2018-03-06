@@ -295,6 +295,8 @@
     <Compile Include="Assets\Scripts\PuckScript.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\SimpleMovement.cs" />
+    <Compile Include="Assets\Scripts\timeCounter.cs" />
+    <Compile Include="Assets\Scripts\TouchTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
