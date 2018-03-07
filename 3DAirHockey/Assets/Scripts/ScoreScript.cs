@@ -10,35 +10,37 @@ public class ScoreScript : MonoBehaviour {
 
     public Text playerRedTxt, playerBlueTxt;
 
-    //public UiManager uiManager;
+    public UiManager uiManager;
 
     public int MaxScore;
 
-    #region Scores
-    private int playerRedScore, playerBlueScore;
+    private int aiScore, playerScore;
 
-    private int PlayerRedScore
+    private int playerBlueScore
     {
-        get { return playerRedScore; }
+        get { return aiScore; }
         set
         {
-            playerRedScore = value;
-            /*if (value == MaxScore)
-                uiManager.ShowRestartCanvas(true);*/
+            aiScore = value;
+            if (value == MaxScore)
+                uiManager.ShowRestartCanvas(true);
         }
     }
 
-    private int PlayerBlueScore
+    private int playerRedScore
     {
-        get { return playerBlueScore; }
+        get { return playerScore; }
         set
         {
-            playerBlueScore = value;
-            /*if (value == MaxScore)
-                uiManager.ShowRestartCanvas(false);*/
+            playerScore = value;
+            if (value == MaxScore)
+                uiManager.ShowRestartCanvas(false);
         }
     }
-    #endregion
+
+
+
+  
 
     public void Increment(Score whichScore)
     {
@@ -53,14 +55,4 @@ public class ScoreScript : MonoBehaviour {
         playerRedScore = playerBlueScore = 0;
         playerRedTxt.text = playerBlueTxt.text = "0";
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
