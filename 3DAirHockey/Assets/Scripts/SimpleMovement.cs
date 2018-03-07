@@ -27,6 +27,20 @@ public class SimpleMovement : MonoBehaviour
        
     }
 
+    public void ResetPosition()
+    {
+
+        if (rb.tag == "RedPlayer")
+        {
+            rb.position = new Vector3(0, 0.1f, 2.5f);
+        }
+
+        else if (rb.tag == "BluePlayer")
+        {
+            rb.position = new Vector3(0, 0.1f, -2.5f);
+        }
+    }
+
     private void Update()
     {
         int i = 0;
