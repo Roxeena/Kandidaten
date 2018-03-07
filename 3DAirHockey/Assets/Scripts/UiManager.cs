@@ -8,8 +8,11 @@ public class UiManager : MonoBehaviour
     public GameObject CanvasRestart;
 
     [Header("CanvasRestart")]
-    public GameObject WinTxt;
-    public GameObject LooseTxt;
+    public GameObject player1WinTxt;
+    public GameObject player1LoseTxt;
+
+    public GameObject player2WinTxt;
+    public GameObject player2LoseTxt;
 
     [Header("Other")]
     public AudioManager audioManager;
@@ -29,14 +32,18 @@ public class UiManager : MonoBehaviour
         if (didAiWin)
         {
             audioManager.PlayLostGame();
-            WinTxt.SetActive(false);
-            LooseTxt.SetActive(true);
+            player1WinTxt.SetActive(false);
+            player1LoseTxt.SetActive(true);
+            player2WinTxt.SetActive(true);
+            player2LoseTxt.SetActive(false);
         }
         else
         {
             audioManager.PlayWonGame();
-            WinTxt.SetActive(true);
-            LooseTxt.SetActive(false);
+            player1WinTxt.SetActive(true);
+            player1LoseTxt.SetActive(false);
+            player2WinTxt.SetActive(false);
+            player2LoseTxt.SetActive(true);
         }
     }
 
