@@ -15,9 +15,6 @@ public class TouchTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Touch myTouch = Input.GetTouch(0);
-
-        Touch[] myTouches = Input.touches;
 
         antal.text = (Input.touchCount).ToString();
     }
