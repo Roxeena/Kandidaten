@@ -31,7 +31,7 @@ public class timeCounter : MonoBehaviour {
         else
         {
             minutesLeft = 0; 
-            secondsLeft = 55; 
+            secondsLeft = 0; 
         }
         
         minutes = minutesLeft.ToString();
@@ -104,7 +104,7 @@ public class timeCounter : MonoBehaviour {
         }
         else //count up
         {
-            if ( repeat && minutesLeft > gameTime) //time is out
+            if ( repeat && (minutesLeft*60 + secondsLeft) > gameTime*60) //time is out
             {
                 secondsLeft = 0;
                 minutesLeft = 0;
