@@ -360,9 +360,9 @@ RectTransform:
   m_Father: {fileID: 1176398482}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1423, y: -267}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -601, y: 693}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &79318172
@@ -566,7 +566,7 @@ MonoBehaviour:
   audioManager: {fileID: 201317315}
   scoreScript: {fileID: 201317312}
   puckScript: {fileID: 536508821}
-  simpleMovement: {fileID: 1764497457}
+  simpleMovement: {fileID: 0}
 --- !u!1 &298844298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,15 +1437,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1830,7 +1830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1121343980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2340,9 +2340,9 @@ MeshCollider:
   m_GameObject: {fileID: 1566383739}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
@@ -2547,7 +2547,7 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
   m_PrefabInternal: {fileID: 805307800}
---- !u!114 &1764497457
+--- !u!114 &1764497458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2555,11 +2555,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764497456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97571d3437615c74b92aee6d322cd5bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  mouseInput: 1
+  mouseInput: 0
 --- !u!64 &1764497459
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2664,15 +2663,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.15
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_Name
@@ -2760,7 +2759,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
---- !u!114 &1974083598
+--- !u!114 &1974083597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2768,11 +2767,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1974083593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97571d3437615c74b92aee6d322cd5bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  mouseInput: 1
+  mouseInput: 0
 --- !u!1001 &1992342244
 Prefab:
   m_ObjectHideFlags: 0
@@ -2814,15 +2812,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Name
