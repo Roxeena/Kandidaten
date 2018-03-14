@@ -59,14 +59,30 @@ public class RayMove : MonoBehaviour {
             if (inControl)
             {
                 float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
-                Vector3 mousePos = c.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
+                Vector3 mousePos = c.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));               
 
-                rb.velocity = ((mousePos - rb.position) / Time.deltaTime);
+                Vector3 direction = mousePos - rb.position;
+                float distance = 1;
+                float transposeDistance = direction.magnitude;
+                
+                //have a trigger collider move in front of the striker to test on collsion?
+                
 
-               // rb.position = mousePos;
+                if (Physics.Raycast(transform.position, direction, distance) == false)
+                {
+                    //transform.Translate(direction * distance);
+                    rb.position = mousePos;
+                }
+                else
+{
+                    //you could either find out where it hit and go there, or just stay still, etc.
+                }
+
+                //rb.velocity = ((mousePos - rb.position) / Time.deltaTime);
+                // rb.position = mousePos;
             }
 
-         
+
         }
 
         if (Input.touchCount > 0)
