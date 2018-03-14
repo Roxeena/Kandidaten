@@ -17,7 +17,17 @@ public class RayMove : MonoBehaviour {
     void Start ()
     {
         rb = GetComponent<Rigidbody>();       
-        c = Camera.main;                
+        c = Camera.main;
+
+        if (GameValues.IsMouse)
+        {
+            mouseInput = true;
+
+        }
+        else
+        {
+            mouseInput = false;
+        }
     }
 
     private void FixedUpdate()

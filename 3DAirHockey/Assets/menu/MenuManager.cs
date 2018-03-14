@@ -15,4 +15,9 @@ public class MenuManager : MonoBehaviour
     {
         GameValues.IsMultiplayer = isOn;
     }
+
+    public void SetMouse(bool isOn)
+    {
+        GameValues.IsMouse = isOn;
+    }
 }
