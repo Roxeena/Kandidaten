@@ -23,11 +23,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 2800000, guid: 5e659d75f9905874bae37e43090c3a93, type: 3}
+        m_Texture: {fileID: 2800000, guid: a1aad8be2d22972428e8afed2312a6cf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 2800000, guid: 5e659d75f9905874bae37e43090c3a93, type: 3}
+        m_Texture: {fileID: 2800000, guid: a1aad8be2d22972428e8afed2312a6cf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
