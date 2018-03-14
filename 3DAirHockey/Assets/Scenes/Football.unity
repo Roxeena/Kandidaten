@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &68528911
 Prefab:
@@ -263,9 +268,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: ca8b329704f16e047b55e63062c8384a, type: 3}
 --- !u!1 &74403530
@@ -569,8 +574,8 @@ MonoBehaviour:
   audioManager: {fileID: 201317315}
   scoreScript: {fileID: 201317312}
   puckScript: {fileID: 536508821}
-  RedMove: {fileID: 0}
-  BlueMove: {fileID: 0}
+  RedMove: {fileID: 1764497462}
+  BlueMove: {fileID: 1974083599}
 --- !u!1 &298844298
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,11 +731,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &350889148
 Transform:
   m_ObjectHideFlags: 0
@@ -843,8 +848,8 @@ MonoBehaviour:
   GoalBlue: {fileID: 592635607}
   Divider: {fileID: 1581374252}
   audioManager: {fileID: 201317315}
-  RedMove: {fileID: 0}
-  BlueMove: {fileID: 0}
+  RedMove: {fileID: 1764497462}
+  BlueMove: {fileID: 1974083599}
 --- !u!54 &536508822
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -869,6 +874,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -884,6 +890,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -901,9 +908,9 @@ MeshCollider:
   m_Material: {fileID: 13400000, guid: 03e15f6b24364e64d892c2fde4b69674, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
 --- !u!96 &536508826
@@ -916,6 +923,7 @@ TrailRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -931,6 +939,7 @@ TrailRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2342,10 +2351,10 @@ MeshCollider:
   m_GameObject: {fileID: 1566383739}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
 --- !u!1 &1581374251
@@ -2549,19 +2558,6 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
   m_PrefabInternal: {fileID: 805307800}
---- !u!114 &1764497457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1764497456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97571d3437615c74b92aee6d322cd5bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  mouseInput: 1
 --- !u!64 &1764497459
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2571,9 +2567,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
 --- !u!54 &1764497460
@@ -2600,6 +2596,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2615,6 +2612,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2623,6 +2621,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1764497462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764497456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseInput: 1
 --- !u!1001 &1836509089
 Prefab:
   m_ObjectHideFlags: 0
@@ -2721,6 +2731,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2736,6 +2747,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2753,12 +2765,12 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
---- !u!114 &1974083598
+--- !u!114 &1974083599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2766,10 +2778,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1974083593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97571d3437615c74b92aee6d322cd5bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
   mouseInput: 1
 --- !u!1001 &1992342244
 Prefab:

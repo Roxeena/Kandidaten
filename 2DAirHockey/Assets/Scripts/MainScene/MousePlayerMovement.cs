@@ -32,12 +32,15 @@ public class MousePlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (Input.GetMouseButton(0))
-        {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        {            
+            float distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;           
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
 
             if (wasJustClicked)
             {
+                Debug.Log("wasJustClicked");
                 wasJustClicked = false;
 
                 if (playerCollider.OverlapPoint(mousePos))
