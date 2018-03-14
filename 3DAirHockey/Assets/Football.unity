@@ -206,7 +206,7 @@ Prefab:
     - target: {fileID: 2300000, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dd51a6d4416df6b46bbae1d9e8cf2a93, type: 2}
+      objectReference: {fileID: 2100000, guid: 45135d39b116d434cb7bda09ded58224, type: 2}
     - target: {fileID: 2300012, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -226,23 +226,23 @@ Prefab:
     - target: {fileID: 2300004, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9179cc4e02ef1ea43a1f1b91f93e9385, type: 2}
+      objectReference: {fileID: 2100000, guid: 3be3cbff5293e414a93055cab9c97e8c, type: 2}
     - target: {fileID: 2300008, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9179cc4e02ef1ea43a1f1b91f93e9385, type: 2}
+      objectReference: {fileID: 2100000, guid: 3be3cbff5293e414a93055cab9c97e8c, type: 2}
     - target: {fileID: 2300006, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9179cc4e02ef1ea43a1f1b91f93e9385, type: 2}
+      objectReference: {fileID: 2100000, guid: 3be3cbff5293e414a93055cab9c97e8c, type: 2}
     - target: {fileID: 2300002, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9179cc4e02ef1ea43a1f1b91f93e9385, type: 2}
+      objectReference: {fileID: 2100000, guid: 3be3cbff5293e414a93055cab9c97e8c, type: 2}
     - target: {fileID: 2300000, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 3afbe7928c8dba146a6a23b9b48ecdf5, type: 2}
+      objectReference: {fileID: 2100000, guid: 45135d39b116d434cb7bda09ded58224, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
   m_IsPrefabParent: 0
@@ -569,7 +569,8 @@ MonoBehaviour:
   audioManager: {fileID: 201317315}
   scoreScript: {fileID: 201317312}
   puckScript: {fileID: 536508821}
-  simpleMovement: {fileID: 1764497457}
+  RedMove: {fileID: 0}
+  BlueMove: {fileID: 0}
 --- !u!1 &298844298
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +843,8 @@ MonoBehaviour:
   GoalBlue: {fileID: 592635607}
   Divider: {fileID: 1581374252}
   audioManager: {fileID: 201317315}
+  RedMove: {fileID: 0}
+  BlueMove: {fileID: 0}
 --- !u!54 &536508822
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1449,11 +1452,11 @@ Prefab:
     - target: {fileID: 2300004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f5816450fa3865542a5dec623a8ed741, type: 2}
+      objectReference: {fileID: 2100000, guid: 3be3cbff5293e414a93055cab9c97e8c, type: 2}
     - target: {fileID: 2300002, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f5816450fa3865542a5dec623a8ed741, type: 2}
+      objectReference: {fileID: 2100000, guid: d47ad52cd22cfc04f9e3cd08a6b0ca01, type: 2}
     - target: {fileID: 2300000, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2682,7 +2685,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 278877d57c264ff449fdab83e045fc0f, type: 2}
+      objectReference: {fileID: 2100000, guid: c15558365e19c1742a0bccde658c9e50, type: 2}
     - target: {fileID: 100004, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_Name
       value: puck
@@ -2830,11 +2833,11 @@ Prefab:
     - target: {fileID: 2300002, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8b5665f740329ec4d9e8983d2019d0bc, type: 2}
+      objectReference: {fileID: 2100000, guid: a1a21c18acc21da42a3c2c132606ddbd, type: 2}
     - target: {fileID: 2300004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8b5665f740329ec4d9e8983d2019d0bc, type: 2}
+      objectReference: {fileID: 2100000, guid: 3be3cbff5293e414a93055cab9c97e8c, type: 2}
     - target: {fileID: 100004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
       propertyPath: m_TagString
       value: BluePlayer
