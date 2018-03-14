@@ -14,6 +14,8 @@ public class PuckScript : MonoBehaviour {
     private Collider PuckCol;
 
     public AudioManager audioManager;
+    public RayMove RedMove;
+    public RayMove BlueMove;
 
     // Use this for initialization
 	void Start () {
@@ -36,6 +38,8 @@ public class PuckScript : MonoBehaviour {
                 Debug.Log("Blue");
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerBlueScore);
                 WasGoal = true;
+                RedMove.Serve();
+                BlueMove.ResetPosition();
                 audioManager.PlayGoal();
                 StartCoroutine(ResetPuck(false));
             }
@@ -44,6 +48,8 @@ public class PuckScript : MonoBehaviour {
                 Debug.Log("Red");
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerRedScore);
                 WasGoal = true;
+                BlueMove.Serve();
+                RedMove.ResetPosition();
                 audioManager.PlayGoal();
                 StartCoroutine(ResetPuck(true));
 

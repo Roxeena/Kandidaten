@@ -20,7 +20,8 @@ public class UiManager : MonoBehaviour
     public ScoreScript scoreScript;
 
     public PuckScript puckScript;
-    public SimpleMovement simpleMovement;
+    public RayMove RedMove;
+    public RayMove BlueMove;
 
     public void ShowRestartCanvas(bool didAiWin)
     {
@@ -53,9 +54,9 @@ public class UiManager : MonoBehaviour
 
         CanvasGame.SetActive(true);
         CanvasRestart.SetActive(false);
-
+        RedMove.ResetPosition();
+        BlueMove.ResetPosition();
         scoreScript.ResetScores();
         puckScript.CenterPuck();
-        simpleMovement.ResetPosition();
     }
 }

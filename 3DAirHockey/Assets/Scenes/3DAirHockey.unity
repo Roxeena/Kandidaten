@@ -566,7 +566,8 @@ MonoBehaviour:
   audioManager: {fileID: 201317315}
   scoreScript: {fileID: 201317312}
   puckScript: {fileID: 536508821}
-  simpleMovement: {fileID: 0}
+  RedMove: {fileID: 1764497458}
+  BlueMove: {fileID: 1974083597}
 --- !u!1 &298844298
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +840,8 @@ MonoBehaviour:
   GoalBlue: {fileID: 592635607}
   Divider: {fileID: 1581374252}
   audioManager: {fileID: 201317315}
+  RedMove: {fileID: 1764497458}
+  BlueMove: {fileID: 1974083597}
 --- !u!54 &536508822
 Rigidbody:
   m_ObjectHideFlags: 0

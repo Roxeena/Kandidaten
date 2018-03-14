@@ -113,9 +113,43 @@ public class RayMove : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    void Update ()
+    public void ResetPosition()
     {
-        
+
+        if (rb.tag == "RedPlayer")
+        {
+            rb.position = new Vector3(0, 0.1f, 2.5f);
+            rb.velocity = Vector3.zero;
+            Debug.Log("Red Reset");
+            inControl = false;
+        }
+
+        else if (rb.tag == "BluePlayer")
+        {
+            rb.position = new Vector3(0, 0.1f, -2.5f);
+            rb.velocity = Vector3.zero;
+            Debug.Log("Blue Reset");
+            inControl = false;
+        }
+    }
+
+    public void Serve()
+    {
+
+        if (rb.tag == "RedPlayer")
+        {
+            rb.position = new Vector3(0, 0.1f, 3.5f);
+            rb.velocity = Vector3.zero;
+            Debug.Log("Red Serve");
+            inControl = false;
+        }
+
+        else if (rb.tag == "BluePlayer")
+        {
+            rb.position = new Vector3(0, 0.1f, -3.5f);
+            rb.velocity = Vector3.zero;
+            Debug.Log("Blue Serve");
+            inControl = false;
+        }
     }
 }

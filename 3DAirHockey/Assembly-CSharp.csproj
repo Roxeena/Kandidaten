@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\fpsCountScript.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />
+     <Compile Include="Assets\Scripts\RayMove.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\SimpleMovement.cs" />
      <Compile Include="Assets\Scripts\timeCounter.cs" />
