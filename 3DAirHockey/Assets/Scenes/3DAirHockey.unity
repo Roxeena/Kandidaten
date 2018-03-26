@@ -2556,7 +2556,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764497456}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
   m_Name: 
@@ -2625,6 +2625,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1764497462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764497456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f77305594f29d744bc282a3b8024ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puck: {fileID: 536508824}
+  Goal: {fileID: 0}
+  mouseInput: 1
+  mouseInputNoMenu: 1
 --- !u!1001 &1836509089
 Prefab:
   m_ObjectHideFlags: 0
@@ -2691,6 +2706,10 @@ Prefab:
     - target: {fileID: 100004, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
       propertyPath: m_Name
       value: puck
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
+      propertyPath: m_TagString
+      value: Puck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d3895fb691c5e8469abb304dc6b98f9, type: 3}
@@ -2768,12 +2787,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974083593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouseInput: 1
+--- !u!114 &1974083599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974083593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f77305594f29d744bc282a3b8024ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puck: {fileID: 536508824}
+  Goal: {fileID: 0}
+  mouseInput: 1
+  mouseInputNoMenu: 1
 --- !u!1001 &1992342244
 Prefab:
   m_ObjectHideFlags: 0

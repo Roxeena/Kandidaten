@@ -295,6 +295,7 @@
     <Compile Include="Assets\menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\fpsCountScript.cs" />
+    <Compile Include="Assets\Scripts\positionMove.cs" />
     <Compile Include="Assets\Scripts\PuckScript.cs" />
     <Compile Include="Assets\Scripts\RayMove.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />

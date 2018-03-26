@@ -8,6 +8,7 @@ TagManager:
   - BlueGoal
   - RedPlayer
   - BluePlayer
+  - Puck
   layers:
   - Default
   - TransparentFX
