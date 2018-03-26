@@ -14,8 +14,8 @@ public class PuckScript : MonoBehaviour {
     private Collider PuckCol;
 
     public AudioManager audioManager;
-    public RayMove RedMove;
-    public RayMove BlueMove;
+    public positionMove RedMove;
+    public positionMove BlueMove;
 
     // Use this for initialization
 	void Start () {
@@ -81,6 +81,11 @@ public class PuckScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+
+        //debugcode
+        if(puck.velocity.y > 0)
+        {
+           // Debug.Log(puck.velocity.y);
+        }		
 	}
 }

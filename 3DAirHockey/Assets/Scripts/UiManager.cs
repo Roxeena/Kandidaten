@@ -20,8 +20,8 @@ public class UiManager : MonoBehaviour
     public ScoreScript scoreScript;
 
     public PuckScript puckScript;
-    public RayMove RedMove;
-    public RayMove BlueMove;
+    public positionMove RedMove;
+    public positionMove BlueMove;
 
     public void ShowRestartCanvas(bool didAiWin)
     {

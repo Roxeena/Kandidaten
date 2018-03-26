@@ -27,7 +27,7 @@ public class positionMove : MonoBehaviour {
         rb = GetComponent<Rigidbody>();       
         c = Camera.main;
         col = GetComponent<Collider>();
-        Physics.IgnoreCollision(Goal, col);
+        Physics.IgnoreCollision(Goal, col);//behövs kanske inte?
 
 
         if (GameValues.IsMouse)
@@ -49,7 +49,8 @@ public class positionMove : MonoBehaviour {
 
     private void Update()
     {
-
+        rb.velocity = Vector3.zero;
+        
 
         if (mouseInput || mouseInputNoMenu)
         {
@@ -118,48 +119,78 @@ public class positionMove : MonoBehaviour {
 
 
         //Does not yet support multitouch!
-        //if (Input.touchCount > 0 && !mouseInputHack)
-        //{
-        //    Touch touch = Input.GetTouch(Input.touchCount - 1);
+        if (Input.touchCount > 0 && !mouseInputNoMenu)
+        {
+            Touch touch = Input.GetTouch(Input.touchCount - 1);
 
-        //    RaycastHit vHit = new RaycastHit();
-        //    Ray vRay = c.ScreenPointToRay(touch.position);
+            RaycastHit vHit = new RaycastHit();
+            Ray vRay = c.ScreenPointToRay(touch.position);
 
-        //    if (Physics.Raycast(vRay, out vHit, 1000))
-        //    {
-        //        Debug.Log(vHit.transform.gameObject);
-        //    }
+            if (Physics.Raycast(vRay, out vHit, 1000))
+            {
+                //Debug.Log(vHit.transform.gameObject);
+            }
 
-        //    //If we touch the gameObject we are inControl of it
-        //    if (vHit.transform.gameObject != null && (touch.phase == TouchPhase.Began && vHit.transform.gameObject == rb.gameObject))
-        //    {
-        //        inControl = true;
-        //        finger = touch.fingerId;
-        //    }
+            //If we touch the gameObject we are inControl of it
+            if (vHit.transform.gameObject != null && (touch.phase == TouchPhase.Began && vHit.transform.gameObject == rb.gameObject))
+            {
+                inControl = true;
+                finger = touch.fingerId;
+            }
 
 
 
-        //    //While inCOntrol the gameOmbject will follow the touch input
-        //    if (inControl)
-        //    {
-        //        Touch touchControl = Input.GetTouch(finger);
-        //        //if we lift the finger we are no longer inControl of the gameObject
-        //        if (touchControl.phase == TouchPhase.Ended)
-        //        {
-        //            inControl = false;
-        //            //OBS! if one player lets go of their stricker niether player is inControl of their striker.
-        //        }
-        //        else
-        //        {
-        //            float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
-        //            Vector3 touchPos = c.ScreenToWorldPoint(new Vector3(touchControl.position.x, touchControl.position.y, distance_to_screen));
+            //While inCOntrol the gameOmbject will follow the touch input
+            if (inControl)
+            {
+                Touch touchControl = Input.GetTouch(finger);
+                //if we lift the finger we are no longer inControl of the gameObject
+                if (touchControl.phase == TouchPhase.Ended)
+                {
+                    inControl = false;
+                    //OBS! if one player lets go of their stricker niether player is inControl of their striker.
+                }
+                else
+                {
+                    float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
+                    Vector3 touchPos = c.ScreenToWorldPoint(new Vector3(touchControl.position.x, touchControl.position.y, distance_to_screen));
 
-        //            rb.velocity = ((touchPos - rb.position) / Time.deltaTime);
-        //            //rb.position = touchPos;
-        //            //rb.velocity = touch.deltaPosition/touch.deltaTime;
-        //        }
-        //    }
-        //}        
+                    Vector3 direction = touchPos - rb.position;
+                    float distance = direction.magnitude;
+
+                    RaycastHit hit;
+                    if (rb.SweepTest(direction, out hit, distance))
+                    {
+                        aboutToCollide = true;
+                        distanceToCollision = hit.distance;
+                    }
+                    else
+                    {
+                        aboutToCollide = false;
+                    }
+                    if (aboutToCollide)
+                    {
+                        //Debug.Log("Collsions iminent !");
+                        if (hit.collider.CompareTag("Puck"))
+                        {
+                            Vector3 StrikeVelocity = direction / Time.deltaTime;
+                            Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
+                            Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
+                            Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
+                            hit.rigidbody.AddForce(ForceDirection);
+                           // Debug.Log(ForceDirection);
+                        }
+                        float f = distanceToCollision - 0.1f;
+                        rb.position = rb.position + direction.normalized * f;
+                    }
+                    else
+                    {
+                        //Debug.Log("no Collsions!");
+                        rb.position = touchPos;
+                    }
+                }
+            }
+        }
     }
 
     //private void OnCollisionEnter(Collision collision)
