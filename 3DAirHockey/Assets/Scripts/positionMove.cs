@@ -51,7 +51,7 @@ public class positionMove : MonoBehaviour {
     {
         rb.velocity = Vector3.zero;
         
-
+        //move to FixedUpdate?
         if (mouseInput || mouseInputNoMenu)
         {
             RaycastHit vHit = new RaycastHit();
@@ -104,7 +104,7 @@ public class positionMove : MonoBehaviour {
                         Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
                         Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
                         hit.rigidbody.AddForce(ForceDirection);
-                        Debug.Log(ForceDirection);
+                      //  Debug.Log(ForceDirection);
                     }
                     float f = distanceToCollision - 0.1f;
                     rb.position = rb.position + direction.normalized * f;

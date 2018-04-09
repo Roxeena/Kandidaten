@@ -18,6 +18,7 @@ public class UiManager : MonoBehaviour
     public AudioManager audioManager;
 
     public ScoreScript scoreScript;
+    
 
     public PuckScript puckScript;
     public positionMove RedMove;

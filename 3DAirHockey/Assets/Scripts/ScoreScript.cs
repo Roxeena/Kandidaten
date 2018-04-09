@@ -14,7 +14,7 @@ public class ScoreScript : MonoBehaviour {
 
     public int MaxScore;
 
-    private int aiScore, playerScore;
+    public int aiScore, playerScore = 0;
 
     private int playerBlueScore
     {

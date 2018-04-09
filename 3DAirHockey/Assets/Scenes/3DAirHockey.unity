@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 201317315}
   - component: {fileID: 201317316}
   - component: {fileID: 201317314}
+  - component: {fileID: 201317317}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -438,6 +439,8 @@ MonoBehaviour:
   playerBlueTxt: {fileID: 571788931}
   uiManager: {fileID: 201317316}
   MaxScore: 2
+  aiScore: 0
+  playerScore: 0
 --- !u!4 &201317313
 Transform:
   m_ObjectHideFlags: 0
@@ -568,6 +571,23 @@ MonoBehaviour:
   puckScript: {fileID: 536508821}
   RedMove: {fileID: 1764497462}
   BlueMove: {fileID: 1974083599}
+--- !u!114 &201317317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201317311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e23804c446b48645a9cfabbbcc78d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTxt: {fileID: 1039748031}
+  countDown: 1
+  repeat: 1
+  gameTime: 0.1
+  uiManager: {fileID: 201317316}
+  scoreScript: {fileID: 201317312}
 --- !u!1 &298844298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1546,94 @@ Transform:
   m_Father: {fileID: 671736115}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &687324711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 687324712}
+  - component: {fileID: 687324715}
+  - component: {fileID: 687324714}
+  - component: {fileID: 687324713}
+  m_Layer: 0
+  m_Name: FPS counter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &687324712
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687324711}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99907345, y: 0.99907345, z: 0.99907345}
+  m_Children: []
+  m_Father: {fileID: 1176398482}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 677, y: -408}
+  m_SizeDelta: {x: 300, y: 200}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &687324713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687324711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d440d6562dbe234faeccf713e495647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInterval: 0.5
+  fpsCountDisplay: {fileID: 687324714}
+--- !u!114 &687324714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687324711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 150
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 150
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &687324715
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687324711}
 --- !u!1001 &805307800
 Prefab:
   m_ObjectHideFlags: 0
@@ -1724,7 +1832,6 @@ GameObject:
   - component: {fileID: 1039748029}
   - component: {fileID: 1039748032}
   - component: {fileID: 1039748031}
-  - component: {fileID: 1039748030}
   m_Layer: 0
   m_Name: timer
   m_TagString: Untagged
@@ -1750,21 +1857,6 @@ RectTransform:
   m_AnchoredPosition: {x: -153, y: 693}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1039748030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1039748028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e23804c446b48645a9cfabbbcc78d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerTxt: {fileID: 1039748031}
-  countDown: 1
-  repeat: 0
-  gameTime: 3
 --- !u!114 &1039748031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2120,6 +2212,7 @@ RectTransform:
   - {fileID: 571788930}
   - {fileID: 1039748029}
   - {fileID: 1121343980}
+  - {fileID: 687324712}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2831,18 +2924,6 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
   m_PrefabInternal: {fileID: 805307800}
---- !u!114 &1764497458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1764497456}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseInput: 1
 --- !u!64 &1764497459
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2919,7 +3000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Puck: {fileID: 536508824}
   Goal: {fileID: 1002488424}
-  mouseInput: 1
+  mouseInput: 0
   mouseInputNoMenu: 1
 --- !u!1 &1974083593 stripped
 GameObject:
@@ -2988,18 +3069,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2cfecb64d37a28642bfe704ff1eb3d6b, type: 3}
---- !u!114 &1974083597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974083593}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5ecde1888e82c44801332e08fd39ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseInput: 1
 --- !u!114 &1974083599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3013,7 +3082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Puck: {fileID: 536508824}
   Goal: {fileID: 1303790158}
-  mouseInput: 1
+  mouseInput: 0
   mouseInputNoMenu: 1
 --- !u!1001 &1992342244
 Prefab:
