@@ -99,11 +99,15 @@ public class positionMove : MonoBehaviour {
                     //Debug.Log("Collsions iminent !");
                     if (hit.collider.CompareTag("Puck"))
                     {
+                        if(Time.deltaTime != 0)
+                        {
                         Vector3 StrikeVelocity = direction / Time.deltaTime;
                         Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
                         Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
                         Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
                         hit.rigidbody.AddForce(ForceDirection);
+                        }
+                        
                       //  Debug.Log(ForceDirection);
                     }
                     float f = distanceToCollision - 0.1f;
