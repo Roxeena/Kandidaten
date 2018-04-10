@@ -118,7 +118,7 @@ public class positionMove : MonoBehaviour {
         }
 
 
-        //Does not yet support multitouch!
+        //supports multitouch! preblem with touch ID, include constraint of which half of spelplanen finger is on when testing the touches?
         if (Input.touchCount > 0 && !mouseInputNoMenu)
         {
             Touch touch = Input.GetTouch(Input.touchCount - 1);
@@ -143,50 +143,62 @@ public class positionMove : MonoBehaviour {
             //While inCOntrol the gameOmbject will follow the touch input
             if (inControl)
             {
-                Touch touchControl = Input.GetTouch(finger);
-                //if we lift the finger we are no longer inControl of the gameObject
-                if (touchControl.phase == TouchPhase.Ended)
-                {
-                    inControl = false;
-                    //OBS! if one player lets go of their stricker niether player is inControl of their striker.
+                Touch touchControl = touch;
+                bool found = false;
+                foreach (Touch t in Input.touches) {
+                    if (t.fingerId == finger)
+                    {
+                        touchControl = t;
+                        found = true;
+                        break;
+                    }
                 }
-                else
+                if (found)
                 {
-                    float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
-                    Vector3 touchPos = c.ScreenToWorldPoint(new Vector3(touchControl.position.x, touchControl.position.y, distance_to_screen));
-
-                    Vector3 direction = touchPos - rb.position;
-                    float distance = direction.magnitude;
-
-                    RaycastHit hit;
-                    if (rb.SweepTest(direction, out hit, distance))
+                    //if we lift the finger we are no longer inControl of the gameObject
+                    if (touchControl.phase == TouchPhase.Ended)
                     {
-                        aboutToCollide = true;
-                        distanceToCollision = hit.distance;
+                        inControl = false;
+                        //OBS! if one player lets go of their stricker niether player is inControl of their striker.
                     }
                     else
                     {
-                        aboutToCollide = false;
-                    }
-                    if (aboutToCollide)
-                    {
-                        //Debug.Log("Collsions iminent !");
-                        if (hit.collider.CompareTag("Puck"))
+                        float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
+                        Vector3 touchPos = c.ScreenToWorldPoint(new Vector3(touchControl.position.x, touchControl.position.y, distance_to_screen));
+
+                        Vector3 direction = touchPos - rb.position;
+                        float distance = direction.magnitude;
+
+                        RaycastHit hit;
+                        if (rb.SweepTest(direction, out hit, distance))
                         {
-                            Vector3 StrikeVelocity = direction / Time.deltaTime;
-                            Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
-                            Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
-                            Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
-                            hit.rigidbody.AddForce(ForceDirection);
-                           // Debug.Log(ForceDirection);
+                            aboutToCollide = true;
+                            distanceToCollision = hit.distance;
                         }
-                        float f = distanceToCollision - 0.1f;
-                        rb.position = rb.position + direction.normalized * f;
-                    }
-                    else
-                    {
-                        //Debug.Log("no Collsions!");
-                        rb.position = touchPos;
+                        else
+                        {
+                            aboutToCollide = false;
+                        }
+                        if (aboutToCollide)
+                        {
+                            //Debug.Log("Collsions iminent !");
+                            if (hit.collider.CompareTag("Puck"))
+                            {
+                                Vector3 StrikeVelocity = direction / Time.deltaTime;
+                                Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
+                                Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
+                                Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
+                                hit.rigidbody.AddForce(ForceDirection);
+                                // Debug.Log(ForceDirection);
+                            }
+                            float f = distanceToCollision - 0.1f;
+                            rb.position = rb.position + direction.normalized * f;
+                        }
+                        else
+                        {
+                            //Debug.Log("no Collsions!");
+                            rb.position = touchPos;
+                        }
                     }
                 }
             }
