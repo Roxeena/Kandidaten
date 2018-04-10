@@ -858,7 +858,7 @@
     </member>
     <member name="M:UnityEngine.EventSystems.IPointerClickHandler.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
       <summary>
-        <para>Use this callback to detect clicks.</para>
+        <para></para>
       </summary>
       <param name="eventData">Current event data.</param>
     </member>
@@ -952,32 +952,32 @@
     </member>
     <member name="T:UnityEngine.EventSystems.MoveDirection">
       <summary>
-        <para>This is an 8 direction movement enum.</para>
+        <para>8 direction movement enum.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.EventSystems.MoveDirection.Down">
       <summary>
-        <para>The Down State of MoveDirection. Assign functionality for moving in a downward direction.</para>
+        <para>Down.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.EventSystems.MoveDirection.Left">
       <summary>
-        <para>This is the Left state of MoveDirection.  Assign functionality for moving to the left.</para>
+        <para>Left.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.EventSystems.MoveDirection.None">
       <summary>
-        <para>This is the None state. Assign functionality that stops movement.</para>
+        <para>None.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.EventSystems.MoveDirection.Right">
       <summary>
-        <para>This is the Right state of MoveDirection. Assign functionality for moving to the right.</para>
+        <para>Right.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.EventSystems.MoveDirection.Up">
       <summary>
-        <para>This is the Up state of MoveDirection.  Assign functionality for moving in an upward direction.</para>
+        <para>Up.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.EventSystems.Physics2DRaycaster">
@@ -1015,11 +1015,6 @@
     <member name="P:UnityEngine.EventSystems.PhysicsRaycaster.finalEventMask">
       <summary>
         <para>Logical and of Camera mask and eventMask.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.EventSystems.PhysicsRaycaster.maxRayIntersections">
-      <summary>
-        <para>Max number of ray intersection allowed to be found.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.EventSystems.PhysicsRaycaster.ComputeRayAndDistance(UnityEngine.EventSystems.PointerEventData,UnityEngine.Ray&amp;,System.Single&amp;)">
@@ -1736,11 +1731,10 @@
         <para>See MonoBehaviour.OnDisable.</para>
       </summary>
     </member>
-    <member name="M:UnityEngine.UI.AspectRatioFitter.SetDirty()">
+    <member name="M:UnityEngine.UI.AspectRatioFitter.SetDirty">
       <summary>
         <para>Mark the AspectRatioFitter as dirty.</para>
       </summary>
-      <param name="delayUpdate"></param>
     </member>
     <member name="M:UnityEngine.UI.AspectRatioFitter.SetLayoutHorizontal">
       <summary>
@@ -5832,7 +5826,7 @@ Characters 0-9, . (dot), and - (dash / minus sign) are allowed. The dash is only
     </member>
     <member name="P:UnityEngine.UI.Text.text">
       <summary>
-        <para>The string value this Text displays.</para>
+        <para>The string value this text will display.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.UI.Text.verticalOverflow">
@@ -5892,7 +5886,7 @@ Characters 0-9, . (dot), and - (dash / minus sign) are allowed. The dash is only
     </member>
     <member name="P:UnityEngine.UI.Toggle.isOn">
       <summary>
-        <para>Return or set whether the Toggle is on or not.</para>
+        <para>Is the toggle on.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.UI.Toggle.onValueChanged">

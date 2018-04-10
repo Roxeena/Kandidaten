@@ -77,6 +77,7 @@ public class PuckScript : MonoBehaviour {
     public void CenterPuck()
     {
         puck.position = new Vector3(0, 2, 0);
+        puck.velocity = Vector3.zero;
     }
 
 	// Update is called once per frame
