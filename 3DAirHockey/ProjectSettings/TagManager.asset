@@ -9,10 +9,6 @@ TagManager:
   - RedPlayer
   - BluePlayer
   - Puck
-  - Pick Up
-  - Shield Up
-  - Shield Blue
-  - Shield Red
   layers:
   - Default
   - TransparentFX
