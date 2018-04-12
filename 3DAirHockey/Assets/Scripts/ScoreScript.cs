@@ -9,12 +9,8 @@ public class ScoreScript : MonoBehaviour {
     }
 
     public Text playerRedTxt, playerBlueTxt;
-
     public UiManager uiManager;
-
-    public int MaxScore;
-
-    public int aiScore, playerScore = 0;
+    public int MaxScore, aiScore, playerScore = 0;
 
     private int playerBlueScore
     {
@@ -37,10 +33,6 @@ public class ScoreScript : MonoBehaviour {
                 uiManager.ShowRestartCanvas(false);
         }
     }
-
-
-
-  
 
     public void Increment(Score whichScore)
     {
