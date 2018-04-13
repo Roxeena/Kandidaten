@@ -55,18 +55,11 @@
      <Compile Include="Assets\menu\MenuManager.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\fpsCountScript.cs" />
+     <Compile Include="Assets\Scripts\positionMove.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />
      <Compile Include="Assets\Scripts\RayMove.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-     <Compile Include="Assets\Scripts\Shield.cs" />
-=======
->>>>>>> parent of 1d33ba7... Developer cnavas
-     <Compile Include="Assets\Scripts\ShieldScript.cs" />
-=======
      <Compile Include="Assets\Scripts\SimpleMovement.cs" />
->>>>>>> origin/master
      <Compile Include="Assets\Scripts\timeCounter.cs" />
      <Compile Include="Assets\Scripts\TouchTest.cs" />
      <Compile Include="Assets\Scripts\UiManager.cs" />
