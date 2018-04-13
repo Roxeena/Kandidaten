@@ -1,6 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+/* Author: 
+ * Last change date: 
+ * Checked by: Malin Ejdbo
+ * Date of check: 2018-03-13
+ * Comment: Documentation.
+*/
 
 public class AudioManager : MonoBehaviour
 {

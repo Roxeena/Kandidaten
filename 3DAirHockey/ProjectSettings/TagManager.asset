@@ -9,6 +9,7 @@ TagManager:
   - RedPlayer
   - BluePlayer
   - Puck
+  - ShieldUp
   layers:
   - Default
   - TransparentFX

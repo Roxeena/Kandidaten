@@ -1,7 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+
+/* Author: 
+ * Last change date: 
+ * Checked by: Malin Ejdbo
+ * Date of check: 2018-04-13
+ * Comment: Is it needed? Dokumentation.
+*/
 
 public class TouchTest : MonoBehaviour {
 

@@ -1,7 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/* Author: 
+ * Last change date: 
+ * Checked by: Malin Ejdbo
+ * Date of check: 2018-04-13
+ * Comment: The collision is not working very well at all times. Dokumentation
+*/
 
 //Does not yet support multitouch!
 public class positionMove : MonoBehaviour {

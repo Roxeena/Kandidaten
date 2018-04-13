@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+
+/* Author: 
+ * Last change date: 
+ * Checked by: Malin Ejdbo
+ * Date of check: 2018-04-13
+ * Comment: Dokumentation.
+*/
 
 public class UiManager : MonoBehaviour
 {
