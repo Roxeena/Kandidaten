@@ -1471,7 +1471,7 @@ RectTransform:
   m_Children:
   - {fileID: 1321690040}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1648,14 +1648,21 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687324711}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
 <<<<<<< HEAD:3DAirHockey/Assets/Scenes/Classic.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 5.061273}
+  m_LocalScale: {x: 0.0038599998, y: 0.0038599998, z: 0.0038599998}
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
   m_Children: []
-  m_Father: {fileID: 1808872801}
+  m_Father: {fileID: 1908921738}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1200, y: 650}
@@ -1671,6 +1678,11 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 677, y: -408}
 >>>>>>> origin/master:3DAirHockey/Assets/Scenes/3DAirHockey.unity
+=======
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3.2541504, y: -1.6638794}
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &687324713
@@ -1711,7 +1723,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 200
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1737,7 +1749,6 @@ GameObject:
   - component: {fileID: 689179801}
   - component: {fileID: 689179800}
   - component: {fileID: 689179799}
-  - component: {fileID: 689179802}
   m_Layer: 0
   m_Name: RedShield
   m_TagString: Shield Red
@@ -1812,18 +1823,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689179797}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &689179802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 689179797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe354073146b29047845c53ccfd6a7fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerCol: {fileID: 1556092496}
 --- !u!1 &704594970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,11 +1973,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
   m_IsPrefabParent: 0
---- !u!64 &842759646 stripped
-MeshCollider:
-  m_PrefabParentObject: {fileID: 64480106828503522, guid: 93f9106ebe57a744989c29ab970fb524,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021813529}
 --- !u!1 &864233538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,16 +2324,23 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121343979}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
 <<<<<<< HEAD:3DAirHockey/Assets/Scenes/Classic.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+=======
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.8699116}
+  m_LocalScale: {x: 0.0038599998, y: 0.0038599998, z: 0.0038599998}
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
   m_Children: []
-  m_Father: {fileID: 1808872801}
+  m_Father: {fileID: 1908921738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
   m_AnchoredPosition: {x: 0, y: -800}
 =======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -2353,6 +2354,9 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -153, y: -669}
 >>>>>>> origin/master:3DAirHockey/Assets/Scenes/3DAirHockey.unity
+=======
+  m_AnchoredPosition: {x: -1.4632874, y: -1.6638794}
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1121343981
@@ -2361,7 +2365,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121343979}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a137f31a2fbeb44ad491a86b07315c, type: 3}
   m_Name: 
@@ -2392,12 +2396,12 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 200
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
 --- !u!222 &1121343983
@@ -2417,6 +2421,7 @@ GameObject:
   - component: {fileID: 1176398481}
   - component: {fileID: 1176398480}
   - component: {fileID: 1176398479}
+  - component: {fileID: 1176398483}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2497,17 +2502,33 @@ RectTransform:
   - {fileID: 1121343980}
   - {fileID: 687324712}
   m_Father: {fileID: 0}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
 <<<<<<< HEAD:3DAirHockey/Assets/Scenes/Classic.unity
   m_RootOrder: 11
 =======
   m_RootOrder: 6
 >>>>>>> origin/master:3DAirHockey/Assets/Scenes/3DAirHockey.unity
+=======
+  m_RootOrder: 12
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1176398483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176398478}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a137f31a2fbeb44ad491a86b07315c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antal: {fileID: 0}
 --- !u!1 &1188567671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,11 +3056,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499713051}
---- !u!64 &1556092496 stripped
-MeshCollider:
-  m_PrefabParentObject: {fileID: 64480106828503522, guid: 93f9106ebe57a744989c29ab970fb524,
-    type: 2}
-  m_PrefabInternal: {fileID: 805307800}
 --- !u!1 &1566383739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,7 +3282,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3557,10 +3573,14 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 805307800}
   m_Script: {fileID: 11500000, guid: 5f77305594f29d744bc282a3b8024ed1, type: 3}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
 --- !u!1 &1808872796
 =======
 --- !u!1 &1764497456 stripped
 >>>>>>> origin/master:3DAirHockey/Assets/Scenes/3DAirHockey.unity
+=======
+--- !u!1 &1908921737
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
   m_PrefabInternal: {fileID: 805307800}
@@ -3572,12 +3592,7 @@ MeshCollider:
 <<<<<<< HEAD:3DAirHockey/Assets/Scenes/Classic.unity
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1808872801}
-  - component: {fileID: 1808872800}
-  - component: {fileID: 1808872799}
-  - component: {fileID: 1808872798}
-  - component: {fileID: 1808872797}
-  - component: {fileID: 1808872802}
+  - component: {fileID: 1908921738}
   m_Layer: 0
   m_Name: DeveloperCanvas
   m_TagString: Untagged
@@ -3585,107 +3600,21 @@ MeshCollider:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1808872797
-MonoBehaviour:
+--- !u!4 &1908921738
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808872796}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a137f31a2fbeb44ad491a86b07315c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  antal: {fileID: 1121343982}
---- !u!114 &1808872798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808872796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1808872799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808872796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!223 &1808872800
-Canvas:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808872796}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 350889147}
-  m_PlaneDistance: 10
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1808872801
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808872796}
+  m_GameObject: {fileID: 1908921737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.1214473, y: 1.663897, z: -0.27878392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1121343980}
   - {fileID: 687324712}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1808872802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808872796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f820ee3a7af5a3846a0531ecd608b403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
 --- !u!1001 &2021813529
 Prefab:
   m_ObjectHideFlags: 0
@@ -3780,7 +3709,6 @@ Rigidbody:
   - component: {fileID: 2123424217}
   - component: {fileID: 2123424216}
   - component: {fileID: 2123424215}
-  - component: {fileID: 2123424218}
   m_Layer: 0
   m_Name: BlueShield
   m_TagString: Shield Blue
@@ -3870,6 +3798,7 @@ MonoBehaviour:
 <<<<<<< HEAD:3DAirHockey/Assets/Scenes/Classic.unity
   m_GameObject: {fileID: 2123424213}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD:3DAirHockey/Assets/Scenes/3DAirHockey.unity
 --- !u!114 &2123424218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3968,6 +3897,8 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: b60a4682ecb203245a5306747b1c5bcf, type: 3}
   m_IsPrefabParent: 0
 >>>>>>> origin/master:3DAirHockey/Assets/Scenes/3DAirHockey.unity
+=======
+>>>>>>> parent of 1d33ba7... Developer cnavas:3DAirHockey/Assets/Scenes/Classic.unity
 --- !u!1 &2127855449
 GameObject:
   m_ObjectHideFlags: 0

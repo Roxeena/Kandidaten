@@ -110,10 +110,14 @@ MonoBehaviour:
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 127
 =======
   controlID: 522
 >>>>>>> origin/master
+=======
+  controlID: 57
+>>>>>>> parent of 1d33ba7... Developer cnavas
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +142,14 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 10
 =======
   controlID: 582
 >>>>>>> origin/master
+=======
+  controlID: 58
+>>>>>>> parent of 1d33ba7... Developer cnavas
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,10 +174,14 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 11
 =======
   controlID: 583
 >>>>>>> origin/master
+=======
+  controlID: 59
+>>>>>>> parent of 1d33ba7... Developer cnavas
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,6 +201,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 326
     height: 410
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 =======
@@ -197,6 +210,10 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> origin/master
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 1d33ba7... Developer cnavas
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -273,6 +290,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 464
     height: 731
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
 =======
@@ -281,6 +299,10 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> origin/master
+=======
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 1d33ba7... Developer cnavas
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -393,6 +415,7 @@ MonoBehaviour:
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 282b0000
     m_LastClickedID: 11048
     m_ExpandedIDs: 04fbffff3cfbffff9efbffff00000000b8290000d6290000062a0000002b0000
@@ -401,6 +424,11 @@ MonoBehaviour:
     m_LastClickedID: 11580
     m_ExpandedIDs: eef8ffff00000000822c0000
 >>>>>>> origin/master
+=======
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 9efbffff00000000fc290000
+>>>>>>> parent of 1d33ba7... Developer cnavas
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -457,6 +485,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.09558259, y: 0.059324265, z: -0.059974823}
     speed: 2
     m_Value: {x: -0.09558259, y: 0.059324265, z: -0.059974823}
@@ -465,6 +494,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.5347158, y: 2.4973288, z: 0.03190028}
 >>>>>>> origin/master
+=======
+    m_Target: {x: 0.14516115, y: -0.15971375, z: -0.05603227}
+    speed: 2
+    m_Value: {x: 0.14516115, y: -0.15971375, z: -0.05603227}
+>>>>>>> parent of 1d33ba7... Developer cnavas
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -489,6 +523,7 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.495167, y: -0.50476956, z: 0.49428108, w: -0.5056792}
     speed: 2
     m_Value: {x: 0.495167, y: 0.50476956, z: -0.49428108, w: 0.5056792}
@@ -497,6 +532,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.3744467, y: 0.5966778, z: -0.3682104, w: 0.60678554}
 >>>>>>> origin/master
+=======
+    m_Target: {x: -0.481529, y: -0.51812357, z: 0.48646972, w: -0.51286495}
+    speed: 2
+    m_Value: {x: 0.481529, y: 0.51812357, z: -0.48646972, w: 0.51286495}
+>>>>>>> parent of 1d33ba7... Developer cnavas
   m_Size:
     m_Target: 7.475451
     speed: 2
@@ -552,6 +592,7 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -564,11 +605,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
 >>>>>>> origin/master
+=======
+    - Assets/Prefabs
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Prefabs
+>>>>>>> parent of 1d33ba7... Developer cnavas
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\Kandidaten\3DAirHockey
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: 24290000
     m_LastClickedID: 10532
@@ -578,6 +627,11 @@ MonoBehaviour:
     m_LastClickedID: 10890
     m_ExpandedIDs: 000000008a2a0000542b0000a82b0000d42b0000e82b0000ca2d0000cc2d0000ce2d0000d02d0000d22d0000d42d0000d62d000000ca9a3bffffff7f
 >>>>>>> origin/master
+=======
+    m_SelectedIDs: 8c280000
+    m_LastClickedID: 10380
+    m_ExpandedIDs: 00000000d8270000ba2b0000bc2b0000be2b0000c02b0000c22b0000c42b0000c62b000000ca9a3bffffff7f
+>>>>>>> parent of 1d33ba7... Developer cnavas
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -606,10 +660,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000da270000cc2b0000ce2b0000d02b0000d22b0000d42b0000d62b0000d82b0000
 =======
     m_ExpandedIDs: 000000008a2a0000542b0000a82b0000d42b0000e82b0000ca2d0000cc2d0000ce2d0000d02d0000d22d0000d42d0000d62d000000ca9a3bffffff7f
 >>>>>>> origin/master
+=======
+    m_ExpandedIDs: 00000000d8270000c6280000d028000020290000562900006829000072290000ba2b0000bc2b0000be2b0000c02b0000c22b0000c42b0000c62b0000
+>>>>>>> parent of 1d33ba7... Developer cnavas
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
