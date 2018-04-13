@@ -56,11 +56,13 @@
      <Compile Include="Assets\Scripts\Arkiv\RayMove.cs" />
      <Compile Include="Assets\Scripts\Arkiv\SimpleMovement.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\DevCanvas.cs" />
      <Compile Include="Assets\Scripts\fpsCountScript.cs" />
      <Compile Include="Assets\Scripts\positionMove.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
+     <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\ShieldScript.cs" />
      <Compile Include="Assets\Scripts\timeCounter.cs" />
      <Compile Include="Assets\Scripts\TouchTest.cs" />
