@@ -16,8 +16,6 @@ public class timeCounter : MonoBehaviour {
     private string seconds;
     private float miliSeconds = 0;
 
-    public UiManager uiManager; //connect to UiManager to access restart functions
-    public ScoreScript scoreScript; //connect to scoreScript to decide winner
     
 
 
@@ -56,11 +54,9 @@ public class timeCounter : MonoBehaviour {
                     minutesLeft = Mathf.Floor(gameTime); //the time lis reest to the gameTime
                     secondsLeft = (gameTime * 60.0f) % 60.0f; //the seconds are reset
                 }
-
+               
 
                 //Send an event/trigger to the game to notify about the end of the round
-               
-                uiManager.ShowRestartCanvas(scoreScript.aiScore > scoreScript.playerScore);
 
             }
             else
@@ -114,7 +110,7 @@ public class timeCounter : MonoBehaviour {
                 minutesLeft = 0;
                 timerTxt.text = "00:00";
                 //Send an event/trigger to the game to notify about the end of the round
-                uiManager.ShowRestartCanvas(scoreScript.aiScore > scoreScript.playerScore);
+
             }
             else
             {                

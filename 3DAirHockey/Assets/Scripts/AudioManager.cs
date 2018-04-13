@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioClip ClubCollision;
+
     public AudioClip PuckCollision;
     public AudioClip Goal;
     public AudioClip LostGame;
     public AudioClip WonGame;
-    public float timertime;
 
     private AudioSource audioSource;
-
-    float timer = 0;
 
     private void Start()
     {
@@ -22,22 +19,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayPuckCollision()
     {
-        if(timer>timertime)
-        {
-            audioSource.PlayOneShot(PuckCollision);
-        }
-
-        timer = 0;
-    }
-
-    public void PlayClubCollision()
-    {
-        if (timer > timertime)
-        {
-            audioSource.PlayOneShot(PuckCollision);
-        }
-
-        timer = 0;
+        audioSource.PlayOneShot(PuckCollision);
     }
 
     public void PlayGoal()
@@ -53,11 +35,5 @@ public class AudioManager : MonoBehaviour
     public void PlayWonGame()
     {
         audioSource.PlayOneShot(WonGame);
-    }
-
-    private void Update()
-    {
-        timer += Time.deltaTime;
-
     }
 }

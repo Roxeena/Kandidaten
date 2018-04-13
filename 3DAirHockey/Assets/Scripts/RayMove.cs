@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RayMove : MonoBehaviour {
 
-
     //initializations
     private Camera c;       
     private bool inControl = false;
@@ -17,30 +16,18 @@ public class RayMove : MonoBehaviour {
     void Start ()
     {
         rb = GetComponent<Rigidbody>();       
-        c = Camera.main;
-
-        if (GameValues.IsMouse)
-        {
-            mouseInput = true;
-
-        }
-        else
-        {
-            mouseInput = false;
-        }
+        c = Camera.main;                
     }
 
     private void FixedUpdate()
     {
-        
-
         if(mouseInput)
         {
             RaycastHit vHit = new RaycastHit();
             Ray vRay = c.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(vRay, out vHit, 1000))
             {
-                Debug.Log(vHit.transform.gameObject);
+                //Debug.Log(vHit.transform.gameObject);
             }
 
             //If we press on (touch) the gameObject we are inControl of it
@@ -59,30 +46,12 @@ public class RayMove : MonoBehaviour {
             if (inControl)
             {
                 float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
-                Vector3 mousePos = c.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));               
+                Vector3 mousePos = c.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
 
-                Vector3 direction = mousePos - rb.position;
-                float distance = 1;
-                float transposeDistance = direction.magnitude;
-                
-                //have a trigger collider move in front of the striker to test on collsion?
-                
+                rb.velocity = ((mousePos - rb.position) / Time.deltaTime);
 
-                if (Physics.Raycast(transform.position, direction, distance) == false)
-                {
-                    //transform.Translate(direction * distance);
-                    rb.position = mousePos;
-                }
-                else
-{
-                    //you could either find out where it hit and go there, or just stay still, etc.
-                }
-
-                //rb.velocity = ((mousePos - rb.position) / Time.deltaTime);
-                // rb.position = mousePos;
-            }
-
-
+               // rb.position = mousePos;
+            }         
         }
 
         if (Input.touchCount > 0)
@@ -94,7 +63,7 @@ public class RayMove : MonoBehaviour {
             
             if (Physics.Raycast(vRay, out vHit, 1000))
             {
-                Debug.Log(vHit.transform.gameObject);
+                //Debug.Log(vHit.transform.gameObject);
             }
 
             //If we touch the gameObject we are inControl of it
@@ -103,8 +72,6 @@ public class RayMove : MonoBehaviour {
                 inControl = true;
                 finger = touch.fingerId;
             }
-
-          
 
             //While inCOntrol the gameOmbject will follow the touch input
             if (inControl)
@@ -136,7 +103,6 @@ public class RayMove : MonoBehaviour {
         {
             rb.position = new Vector3(0, 0.1f, 2.5f);
             rb.velocity = Vector3.zero;
-            Debug.Log("Red Reset");
             inControl = false;
         }
 
@@ -144,7 +110,6 @@ public class RayMove : MonoBehaviour {
         {
             rb.position = new Vector3(0, 0.1f, -2.5f);
             rb.velocity = Vector3.zero;
-            Debug.Log("Blue Reset");
             inControl = false;
         }
     }
@@ -166,6 +131,14 @@ public class RayMove : MonoBehaviour {
             rb.velocity = Vector3.zero;
             Debug.Log("Blue Serve");
             inControl = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
         }
     }
 }
