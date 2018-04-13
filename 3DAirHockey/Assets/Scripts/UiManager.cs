@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
 {
@@ -10,17 +12,22 @@ public class UiManager : MonoBehaviour
     [Header("CanvasRestart")]
     public GameObject player1WinTxt;
     public GameObject player1LoseTxt;
+    public GameObject redRestart;
 
     public GameObject player2WinTxt;
     public GameObject player2LoseTxt;
+    public GameObject blueRestart;
 
     [Header("Other")]
     public AudioManager audioManager;
 
     public ScoreScript scoreScript;
+    
+
     public PuckScript puckScript;
-    public RayMove RedMove;
-    public RayMove BlueMove;
+    public positionMove RedMove;
+    public positionMove BlueMove;
+
 
     public void ShowRestartCanvas(bool didAiWin)
     {
@@ -47,16 +54,53 @@ public class UiManager : MonoBehaviour
         }
     }
 
+    public int redReady = 0;
+    public int blueReady = 0;
+
     public void RestartGame()
     {
-        Debug.Log("Restart!");
-        Time.timeScale = 1;
-        scoreScript.ResetScores();
-        RedMove.ResetPosition();
-        BlueMove.ResetPosition();
-        puckScript.CenterPuck();
-        Debug.Log("Positions reset");
-        CanvasGame.SetActive(true);
-        CanvasRestart.SetActive(false);
+        GameObject redRestart = GameObject.Find("RestartBtnRed");
+
+        if (EventSystem.current.currentSelectedGameObject.name == "RestartBtnRed")
+        {
+            if (redReady == 1)
+            {
+                redReady = 0;
+            }
+            else
+            {
+                print("Red Ready");
+                redReady = 1;
+            }
+            
+        }
+
+        if (EventSystem.current.currentSelectedGameObject.name == "RestartBtnBlue")
+        {
+            if (blueReady == 1)
+            {
+                blueReady = 0;
+            }
+            else
+            {
+                print("Blue Ready");
+                blueReady = 1;
+            }
+        }
+
+        if (redReady == 1 && blueReady == 1)
+        {
+            Time.timeScale = 1;
+
+            CanvasGame.SetActive(true);
+            CanvasRestart.SetActive(false);
+            RedMove.ResetPosition();
+            BlueMove.ResetPosition();
+            scoreScript.ResetScores();
+            puckScript.CenterPuck();
+
+            redReady = 0;
+            blueReady = 0;
+        }
     }
 }

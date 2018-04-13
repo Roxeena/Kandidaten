@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/3DAirHockey.unity
+    path: Assets/Scenes/menu.unity
+    guid: fb3de6f0d12c3084ca9108a070acf2ab
+  - enabled: 1
+    path: Assets/Scenes/3DAirHockey.unity
     guid: 9ecfeb659ba9bfe4589241f83fb2820e

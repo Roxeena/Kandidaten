@@ -8,11 +8,16 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("3DAirHockey");
+        SceneManager.LoadScene("Scenes/3DAirHockey");
     }
 
     public void SetMultiplayer(bool isOn)
     {
         GameValues.IsMultiplayer = isOn;
+    }
+
+    public void SetMouse(bool isOn)
+    {
+        GameValues.IsMouse = isOn;
     }
 }

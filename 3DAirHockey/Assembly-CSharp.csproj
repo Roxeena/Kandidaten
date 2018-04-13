@@ -54,19 +54,16 @@
      <Compile Include="Assets\menu\GameValues.cs" />
      <Compile Include="Assets\menu\MenuManager.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
-     <Compile Include="Assets\Scripts\DevCanvas.cs" />
      <Compile Include="Assets\Scripts\fpsCountScript.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />
-     <Compile Include="Assets\Scripts\PUpScript.cs" />
      <Compile Include="Assets\Scripts\RayMove.cs" />
-     <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\SimpleMovement.cs" />
      <Compile Include="Assets\Scripts\timeCounter.cs" />
      <Compile Include="Assets\Scripts\TouchTest.cs" />
      <Compile Include="Assets\Scripts\UiManager.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/admin/OneDrive/Dokument/Skola/Universitetet/TNM094 - Kandidatprojekt/Kandidaten/3DAirHockey/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/admin/Documents/GitHub/Kandidaten/3DAirHockey/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
