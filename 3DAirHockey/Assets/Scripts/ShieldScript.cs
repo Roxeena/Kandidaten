@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 /* Author: Malin Ejdbo
  * Last change date: 2018-04-13
+ * Day of correction: 2018-04-16
  * Checked by: Emilie Ho
  * Date of check: 2018-04-16
  * Comment: Add what "red" means in deactivateShield.
@@ -48,6 +49,8 @@ public class ShieldScript : MonoBehaviour {
     }
 
     //Function that deactivates the shield, after some time or after a number of hits
+    //Red is an argument that says if it is the red sheild or the blue shield that are to be deactivated. 
+    //true is red and false is blue
     public void deactivateShield(bool Red)
     {
         //Deactivate the shield told by argument Red 
@@ -66,6 +69,8 @@ public class ShieldScript : MonoBehaviour {
     }
 
     //Decrement the number of lives the shield has left
+    //Red is an argument that says if it is the red sheild or the blue shield that are to be decremented. 
+    //true is red and false is blue
     public void decrement(bool Red)
     {
         // Decrement number of lives of the shield told by argument Red
@@ -76,7 +81,7 @@ public class ShieldScript : MonoBehaviour {
 
         // Check if shield is dead, then deactivate it
         if (RedLives == 0 || BlueLives == 0)
-            deactivateShield(Red);
+            deactivateShield(Red);  //If red is true, deactivate red shield. If false, deactivate blue shield
     }
 
     //Update is called once per frame
