@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-/* Author: 
+/* Author: Emilie Ho
  * Last change date: 
  * Checked by: Malin Ejdbo
  * Date of check: 2018-03-13
@@ -25,13 +25,6 @@ public class fpsCountScript : MonoBehaviour
 
     void Start()
     {
-        //if (!fpsCountDisplay)
-        //{
-        //    Debug.Log("Det behövs en GUIText komponent!");
-        //    enabled = false;
-        //    return;
-        //}
-        //timeleft = updateInterval;
     }
 
     void Update()
