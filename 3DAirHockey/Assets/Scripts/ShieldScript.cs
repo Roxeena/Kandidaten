@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 /* Author: Malin Ejdbo
  * Last change date: 2018-04-13
- * Checked by:
- * Date of check:
- * Comment:
+ * Checked by: Emilie Ho
+ * Date of check: 2018-04-16
+ * Comment: Add what "red" means in deactivateShield.
 */
 
 //Power up class that activates a shield around the goal of the player who picked up the power up object
@@ -20,7 +20,7 @@ public class ShieldScript : MonoBehaviour {
     private bool RedShieldUp, BlueShieldUp;         //bool that says is a shield is up or not 
     public Text RedShieldTxt, BlueShieldTxt;        //UI text to show how much time is left
     private float numDecimals = 1f;                 //How many decimals of he time to be displayed
-    private double precision = 0.01;               //How close to zero to say the time is zero (comparing floats)
+    private double precision = 0.01;                //How close to zero to say the time is zero (comparing floats)
 
     //Use this for initialization
     void Start()
