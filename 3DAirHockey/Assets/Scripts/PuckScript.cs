@@ -13,6 +13,7 @@ public class PuckScript : MonoBehaviour {
     // Variables 
     public ScoreScript ScoreScriptInstance;             //Score script that keep track of the scores
     public ShieldScript Shield;                         //Script that handles the shield power up
+    public ExpandScript Expand;                         //Script that handels the expand power up
     public static bool WasGoal { get; private set; }    //bool to determine if it was goal recently or not
     private Rigidbody puck;                             //The puck object
     public Collider GoalRed, GoalBlue, Divider;         //Colliders the puck should ignore
@@ -72,6 +73,14 @@ public class PuckScript : MonoBehaviour {
         {
             col.gameObject.SetActive(false);
             Shield.activateShield(didRedStrike);
+        }
+
+        //Check if the puck hit a expand power up object
+        //Depending on who struck the puck last will get the expand-feature
+        if (col.tag == "ExpandOn")
+        {
+            col.gameObject.SetActive(false);
+            Expand.activateExpand(didRedStrike);
         }
     }
 
