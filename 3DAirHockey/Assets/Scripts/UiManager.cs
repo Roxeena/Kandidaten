@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 /* Author: 
  * Last change date: 
@@ -107,6 +108,15 @@ public class UiManager : MonoBehaviour
 
             redReady = 0;
             blueReady = 0;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))//restarts the game if "r" is pressed
+        {
+           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
         }
     }
 }
