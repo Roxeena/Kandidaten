@@ -43,26 +43,19 @@ public class PuckScript : MonoBehaviour {
             //Check if it is goal and which goal it is
             if (col.tag == "BlueGoal")
             {
-                Debug.Log("BLue goal!");
                 //Increment the score and tell game it was goal
                 //Reset the players and serve the puck
-                puck.constraints =  RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ; //allows the puck to fall down the goal hole
-                puck.velocity = puck.velocity * 0.3f;//stops the puck from bouncing out
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerBlueScore);
                 WasGoal = true;
                 RedMove.Serve();
                 BlueMove.ResetPosition();
                 audioManager.PlayGoal();
                 StartCoroutine(ResetPuck(false));
-
             }
             else if(col.tag == "RedGoal")
             {
-                Debug.Log("Red goal!");
                 //Increment the score and tell game it was goal
                 //Reset the players and serve the puck
-                puck.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;//allows the puck to fall down the goal hole
-                puck.velocity = puck.velocity * 0.1f;//stops the puck from bouncing out
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerRedScore);
                 WasGoal = true;
                 BlueMove.Serve();
@@ -106,15 +99,6 @@ public class PuckScript : MonoBehaviour {
         else if (collision.collider.tag == "BlueShield")
             Shield.decrement(false);
 
-
-        if(collision.collider.tag == "Floor" && !WasGoal)
-        {
-            Debug.Log("hit floor!");
-            StartCoroutine(WaitForBounce());
-        }
-
-
-
     }
 
     //Reset the puck after a small delay, reset material on puck
@@ -122,7 +106,7 @@ public class PuckScript : MonoBehaviour {
     {
         yield return new WaitForSecondsRealtime(1);
         WasGoal = false;
-        puck.velocity = new Vector3(0, 0, 0);
+        puck.velocity = puck.position = new Vector3(0, 0, 0);
         puck.GetComponent<Renderer>().material = PuckMat;
 
         //Depending on who made a goal, the other person gets to serve
@@ -140,16 +124,7 @@ public class PuckScript : MonoBehaviour {
         puck.GetComponent<Renderer>().material = PuckMat;
     }
 
-    IEnumerator WaitForBounce()
-    {
-        print(Time.time);
-        yield return new WaitForSeconds(1);
-        puck.position = new Vector3(puck.position.x, 0.1f, puck.position.z);
-        puck.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;    
-        print(Time.time);
-    }
-
-    /* //Debug code
+	/* //Debug code
      // Update is called once per frame
 	void Update () {
 
