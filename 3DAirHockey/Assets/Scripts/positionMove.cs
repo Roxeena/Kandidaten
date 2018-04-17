@@ -1,13 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-/* Author: 
- * Last change date: 
- * Checked by: Malin Ejdbo
- * Date of check: 2018-04-13
- * Comment: The collision is not working very well at all times. Dokumentation
-*/
 
-//Does not yet support multitouch!
+
 public class positionMove : MonoBehaviour {
 
 
@@ -59,10 +55,11 @@ public class positionMove : MonoBehaviour {
         if (mouseInput || mouseInputNoMenu)
         {
             RaycastHit vHit = new RaycastHit();
+            var layerMask = 8;
             Ray vRay = c.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(vRay, out vHit, 1000))
             {
-               // Debug.Log(vHit.transform.gameObject);
+              //  Debug.Log(vHit.transform.gameObject);
             }
 
             //If we press on (touch) the gameObject we are inControl of it
@@ -85,11 +82,9 @@ public class positionMove : MonoBehaviour {
 
                 Vector3 direction = mousePos - rb.position;
                 float distance = direction.magnitude;
-
-                //have a trigger collider move in front of the striker to test on collsion? sweep or spherecast!
-
+                
                 RaycastHit hit;
-                if (rb.SweepTest(direction, out hit, distance))
+                if (rb.SweepTest(direction, out hit, distance) && !hit.collider.isTrigger) //don't collide with trigger colliders!
                 {
                     aboutToCollide = true;
                     distanceToCollision = hit.distance;
@@ -100,33 +95,59 @@ public class positionMove : MonoBehaviour {
                 }
                 if (aboutToCollide)
                 {
-                    //Debug.Log("Collsions iminent !");
-                    if (hit.collider.CompareTag("Puck"))
+                    if (hit.collider.CompareTag("Puck")) //we hit the puck!
                     {
-                        if(Time.deltaTime != 0)
+                        //callculate force to be transfered to the puck
+                        if(Time.deltaTime != 0) //don't divide with zero.
                         {
                         Vector3 StrikeVelocity = direction / Time.deltaTime;
                         Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
                         Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
                         Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
-                        hit.rigidbody.AddForce(ForceDirection);
-                        }
-                        
-                      //  Debug.Log(ForceDirection);
+                        //hit.rigidbody.AddForce(ForceDirection);
+                        hit.rigidbody.AddForceAtPosition(ForceDirection, hit.point);//add force to puck
+                        }                        
                     }
-                    float f = distanceToCollision - 0.1f;
+                    float f = distanceToCollision - 0.1f;//we want' to stop before colliding
                     rb.position = rb.position + direction.normalized * f;
+                    //calculate how the puck will "glide" against obstructing surfaces
+                    //project component parallel with the hit surface
+                    Vector3 normalDirection = Vector3.Dot(direction, -hit.normal)*(-hit.normal);
+                    Vector3 tangentDirection = direction - normalDirection;
+                    //see if we hit something while gliding
+                    RaycastHit hit2;
+                    if (rb.SweepTest(tangentDirection, out hit2, tangentDirection.magnitude) && !hit2.collider.isTrigger)
+                    {
+                        if (hit2.collider.CompareTag("Puck"))//did we  hit the puck?
+                        {
+                            if (Time.deltaTime != 0)
+                            {
+                                Vector3 StrikeVelocity = tangentDirection / Time.deltaTime;
+                                Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
+                                Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
+                                Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);                               
+                                hit2.rigidbody.AddForceAtPosition(ForceDirection, hit2.point);
+                            }
+                        }
+                        distanceToCollision = hit2.distance;
+                        float k = distanceToCollision - 0.1f;//we want' to stop before colliding
+                        rb.position = rb.position + tangentDirection.normalized*k;
+                    }
+                    else
+                    {
+                        rb.position = rb.position + tangentDirection;//we move!
+                    }
+
                 }
                 else
                 {
-                    //Debug.Log("no Collsions!");
-                    rb.position = mousePos;
+                    rb.position = mousePos;//we didn't hit anything on the way so we move the striker to the mousepointer.
                 }
             }
         }
 
 
-        //supports multitouch! preblem with touch ID, include constraint of which half of spelplanen finger is on when testing the touches?
+        //supports multitouch!
         if (Input.touchCount > 0 && !mouseInputNoMenu)
         {
             Touch touch = Input.GetTouch(Input.touchCount - 1);
@@ -154,7 +175,7 @@ public class positionMove : MonoBehaviour {
                 Touch touchControl = touch;
                 bool found = false;
                 foreach (Touch t in Input.touches) {
-                    if (t.fingerId == finger)
+                    if (t.fingerId == finger)//is it the same finger that began touching the striker?
                     {
                         touchControl = t;
                         found = true;
@@ -166,8 +187,7 @@ public class positionMove : MonoBehaviour {
                     //if we lift the finger we are no longer inControl of the gameObject
                     if (touchControl.phase == TouchPhase.Ended)
                     {
-                        inControl = false;
-                        //OBS! if one player lets go of their stricker niether player is inControl of their striker.
+                        inControl = false;                        
                     }
                     else
                     {
@@ -178,7 +198,7 @@ public class positionMove : MonoBehaviour {
                         float distance = direction.magnitude;
 
                         RaycastHit hit;
-                        if (rb.SweepTest(direction, out hit, distance))
+                        if (rb.SweepTest(direction, out hit, distance)  && !hit.collider.isTrigger)//do we collide with anything when we try to move? ignore trigger colliders
                         {
                             aboutToCollide = true;
                             distanceToCollision = hit.distance;
@@ -188,24 +208,49 @@ public class positionMove : MonoBehaviour {
                             aboutToCollide = false;
                         }
                         if (aboutToCollide)
-                        {
-                            //Debug.Log("Collsions iminent !");
-                            if (hit.collider.CompareTag("Puck"))
+                        {                            
+                            if (hit.collider.CompareTag("Puck"))//we hit the puck!
                             {
+                                //callculate the froce to betransfered to the puck
                                 Vector3 StrikeVelocity = direction / Time.deltaTime;
                                 Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
                                 Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
                                 Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
-                                hit.rigidbody.AddForce(ForceDirection);
-                                // Debug.Log(ForceDirection);
+                                hit.rigidbody.AddForce(ForceDirection);//add force to the puck
                             }
                             float f = distanceToCollision - 0.1f;
-                            rb.position = rb.position + direction.normalized * f;
+                            rb.position = rb.position + direction.normalized * f;//stop before enteriong the obstructing object
+                            //callculate how the striker will "glide" against obstructing surfaces
+                            Vector3 normalDirection = Vector3.Dot(direction, -hit.normal) * (-hit.normal);
+                            Vector3 tangentDirection = direction - normalDirection;
+
+                            RaycastHit hit2;
+                            if (rb.SweepTest(tangentDirection, out hit2, tangentDirection.magnitude) && !hit2.collider.isTrigger)
+                            {
+                                if (hit2.collider.CompareTag("Puck"))
+                                {
+                                    if (Time.deltaTime != 0)
+                                    {
+                                        Vector3 StrikeVelocity = tangentDirection / Time.deltaTime;
+                                        Vector3 StrikeAcc = StrikeVelocity / Time.deltaTime;
+                                        Vector3 StrikeForce = StrikeAcc * rb.mass; //for good Force (massa puck)>(massa klubba), why? Pontus Doesn't know
+                                        Vector3 ForceDirection = new Vector3(StrikeForce.x, 0, StrikeForce.z);
+                                        //hit2.rigidbody.AddForce(ForceDirection);
+                                        hit2.rigidbody.AddForceAtPosition(ForceDirection, hit2.point);
+                                    }
+                                }
+                                distanceToCollision = hit2.distance;
+                                float k = distanceToCollision - 0.1f;
+                                rb.position = rb.position + tangentDirection.normalized * k;
+                            }
+                            else
+                            {
+                                rb.position = rb.position + tangentDirection;
+                            }
                         }
                         else
                         {
-                            //Debug.Log("no Collsions!");
-                            rb.position = touchPos;
+                            rb.position = touchPos;//we didn't hit anything so we move the striker to the finger
                         }
                     }
                 }
