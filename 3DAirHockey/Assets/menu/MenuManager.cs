@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Scenes/3DAirHockey");
+        SceneManager.LoadScene("Scenes/Classic");
     }
 
     public void SetMultiplayer(bool isOn)
