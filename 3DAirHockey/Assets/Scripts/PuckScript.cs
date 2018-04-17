@@ -14,6 +14,7 @@ public class PuckScript : MonoBehaviour {
     public ScoreScript ScoreScriptInstance;             //Score script that keep track of the scores
     public ShieldScript Shield;                         //Script that handles the shield power up
     public ExpandScript Expand;                         //Script that handels the expand power up
+    public ShrinkScript Shrink;                         //Script that handels the shrink power up
     public static bool WasGoal { get; private set; }    //bool to determine if it was goal recently or not
     private Rigidbody puck;                             //The puck object
     public Collider GoalRed, GoalBlue, Divider;         //Colliders the puck should ignore
@@ -81,6 +82,14 @@ public class PuckScript : MonoBehaviour {
         {
             col.gameObject.SetActive(false);
             Expand.activateExpand(didRedStrike);
+        }
+
+        //Check if the puck hit a shrink power up object
+        //Depending on who struck the puck last will get the shrink-feature
+        if (col.tag == "ShrinkOn")
+        {
+            col.gameObject.SetActive(false);
+            Shrink.activateShrink(didRedStrike);
         }
     }
 
