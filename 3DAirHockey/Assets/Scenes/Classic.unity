@@ -1692,7 +1692,7 @@ Prefab:
     - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
         type: 2}
       propertyPath: mouseInputNoMenu
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
@@ -3245,8 +3245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreScriptInstance: {fileID: 201317312}
   Shield: {fileID: 1611618098}
-  Expand: {fileID: 1611618101}
-  Shrink: {fileID: 1611618100}
+  Expand: {fileID: 0}
+  Shrink: {fileID: 0}
   GoalRed: {fileID: 354783414}
   GoalBlue: {fileID: 168629843}
   Divider: {fileID: 1581374252}
@@ -3740,7 +3740,7 @@ Prefab:
     - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
         type: 2}
       propertyPath: mouseInputNoMenu
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
