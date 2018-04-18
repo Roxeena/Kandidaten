@@ -588,7 +588,7 @@ MonoBehaviour:
   Goal: {fileID: 8300000, guid: ca3915821fca406488be7a3d5c9fd4a1, type: 3}
   LostGame: {fileID: 8300000, guid: b3ab893b93790b34ab20797fe06020e7, type: 3}
   WonGame: {fileID: 8300000, guid: ed1dd218aa0854d4ab48d8ba02123cb7, type: 3}
-  timertime: 0
+  timertime: 0.1
 --- !u!114 &201317316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3245,6 +3245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreScriptInstance: {fileID: 201317312}
   Shield: {fileID: 1611618098}
+  Expand: {fileID: 0}
+  Shrink: {fileID: 0}
   GoalRed: {fileID: 354783414}
   GoalBlue: {fileID: 168629843}
   Divider: {fileID: 1581374252}
