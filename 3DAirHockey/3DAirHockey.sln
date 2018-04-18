@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
@@ -21,3 +22,25 @@ Global
 		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3DAirHockey", "3DAirHockey.csproj", "{75EBC540-73F7-4AC7-ECC0-214F2C047ACF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75EBC540-73F7-4AC7-ECC0-214F2C047ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EBC540-73F7-4AC7-ECC0-214F2C047ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EBC540-73F7-4AC7-ECC0-214F2C047ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EBC540-73F7-4AC7-ECC0-214F2C047ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+>>>>>>> parent of 5487197... New scene called Fotboll, a copy of the classic scene but with football textures. Also a new scene called Neon, that is a copy of the classic scene but no texture has been added yet as they are not finished.

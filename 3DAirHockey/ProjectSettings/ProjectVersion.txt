@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.4.0f1
 =======
 m_EditorVersion: 2017.3.1f1
@@ -11,3 +12,6 @@ m_EditorVersion: 2017.3.0f3
 =======
 m_EditorVersion: 2017.4.0f1
 >>>>>>> parent of 0917a31... Merge conflict with new scenes
+=======
+m_EditorVersion: 2017.3.0f3
+>>>>>>> parent of 5487197... New scene called Fotboll, a copy of the classic scene but with football textures. Also a new scene called Neon, that is a copy of the classic scene but no texture has been added yet as they are not finished.
