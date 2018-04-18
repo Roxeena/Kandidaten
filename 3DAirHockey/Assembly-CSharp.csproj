@@ -57,12 +57,15 @@
      <Compile Include="Assets\Scripts\Arikiv\SimpleMovement.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\DevCanvas.cs" />
+     <Compile Include="Assets\Scripts\ExpandScript.cs" />
      <Compile Include="Assets\Scripts\fpsCountScript.cs" />
      <Compile Include="Assets\Scripts\positionMove.cs" />
+     <Compile Include="Assets\Scripts\PowerUpSpawn.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\ShieldScript.cs" />
+     <Compile Include="Assets\Scripts\ShrinkScript.cs" />
      <Compile Include="Assets\Scripts\timeCounter.cs" />
      <Compile Include="Assets\Scripts\TouchTest.cs" />
      <Compile Include="Assets\Scripts\UiManager.cs" />
