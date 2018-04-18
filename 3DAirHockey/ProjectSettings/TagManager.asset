@@ -10,8 +10,6 @@ TagManager:
   - BluePlayer
   - Puck
   - ShieldUp
-  - ExpandOn
-  - ShrinkOn
   layers:
   - Default
   - TransparentFX

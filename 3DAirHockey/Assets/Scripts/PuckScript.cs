@@ -2,7 +2,7 @@
 using UnityEngine;
 
 /* Author: Malin Ejdbo
- * Last change date: 2018-04-18
+ * Last change date: 2018-04-13
  * Checked by: 
  * Date of check: 
  * Comment: 
@@ -13,8 +13,6 @@ public class PuckScript : MonoBehaviour {
     // Variables 
     public ScoreScript ScoreScriptInstance;             //Score script that keep track of the scores
     public ShieldScript Shield;                         //Script that handles the shield power up
-    public ExpandScript Expand;                         //Script that handles the expand power up
-    public ShrinkScript Shrink;                         //Script that handles the shrink power up
     public static bool WasGoal { get; private set; }    //bool to determine if it was goal recently or not
     private Rigidbody puck;                             //The puck object
     public Collider GoalRed, GoalBlue, Divider;         //Colliders the puck should ignore
@@ -45,26 +43,19 @@ public class PuckScript : MonoBehaviour {
             //Check if it is goal and which goal it is
             if (col.tag == "BlueGoal")
             {
-                Debug.Log("BLue goal!");
                 //Increment the score and tell game it was goal
                 //Reset the players and serve the puck
-                puck.constraints =  RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ; //allows the puck to fall down the goal hole
-                puck.velocity = puck.velocity * 0.3f;//stops the puck from bouncing out
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerBlueScore);
                 WasGoal = true;
                 RedMove.Serve();
                 BlueMove.ResetPosition();
                 audioManager.PlayGoal();
                 StartCoroutine(ResetPuck(false));
-
             }
             else if(col.tag == "RedGoal")
             {
-                Debug.Log("Red goal!");
                 //Increment the score and tell game it was goal
                 //Reset the players and serve the puck
-                puck.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;//allows the puck to fall down the goal hole
-                puck.velocity = puck.velocity * 0.1f;//stops the puck from bouncing out
                 ScoreScriptInstance.Increment(ScoreScript.Score.playerRedScore);
                 WasGoal = true;
                 BlueMove.Serve();
@@ -81,18 +72,6 @@ public class PuckScript : MonoBehaviour {
         {
             col.gameObject.SetActive(false);
             Shield.activateShield(didRedStrike);
-        }
-
-        if (col.tag == "ExpandOn")
-        {
-            col.gameObject.SetActive(false);
-            Expand.activateExpand(didRedStrike);
-        }
-
-        if (col.tag == "ShrinkOn")
-        {
-            col.gameObject.SetActive(false);
-            Shrink.activateShrink(didRedStrike);
         }
     }
 
@@ -120,15 +99,6 @@ public class PuckScript : MonoBehaviour {
         else if (collision.collider.tag == "BlueShield")
             Shield.decrement(false);
 
-
-        if(collision.collider.tag == "Floor" && !WasGoal)
-        {
-            Debug.Log("hit floor!");
-            StartCoroutine(WaitForBounce());
-        }
-
-
-
     }
 
     //Reset the puck after a small delay, reset material on puck
@@ -136,7 +106,7 @@ public class PuckScript : MonoBehaviour {
     {
         yield return new WaitForSecondsRealtime(1);
         WasGoal = false;
-        puck.velocity = new Vector3(0, 0, 0);
+        puck.velocity = puck.position = new Vector3(0, 0, 0);
         puck.GetComponent<Renderer>().material = PuckMat;
 
         //Depending on who made a goal, the other person gets to serve
@@ -154,16 +124,7 @@ public class PuckScript : MonoBehaviour {
         puck.GetComponent<Renderer>().material = PuckMat;
     }
 
-    IEnumerator WaitForBounce()
-    {
-        print(Time.time);
-        yield return new WaitForSeconds(1);
-        puck.position = new Vector3(puck.position.x, 0.1f, puck.position.z);
-        puck.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;    
-        print(Time.time);
-    }
-
-    /* //Debug code
+	/* //Debug code
      // Update is called once per frame
 	void Update () {
 

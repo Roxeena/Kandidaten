@@ -13,14 +13,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 61
     y: 44
+=======
+    x: 0
+    y: 42
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     width: 1366
     height: 686
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +48,11 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 686
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 300}
+=======
+  m_MinSize: {x: 950, y: 542}
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -106,8 +115,13 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 636
+<<<<<<< HEAD
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
+=======
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
   vertical: 0
   controlID: 22
 --- !u!114 &6
@@ -133,7 +147,11 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 23
+=======
+  controlID: 57
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +175,11 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 68
+=======
+  controlID: 58
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,7 +200,11 @@ MonoBehaviour:
     height: 357
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+<<<<<<< HEAD
   m_ActualView: {fileID: 14}
+=======
+  m_ActualView: {fileID: 13}
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
   m_Panes:
   - {fileID: 14}
   m_Selected: 0
@@ -254,9 +280,15 @@ MonoBehaviour:
     y: 0
     width: 413
     height: 636
+<<<<<<< HEAD
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
+=======
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
   m_Panes:
   - {fileID: 18}
   m_Selected: 0
@@ -310,8 +342,13 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 354
     y: 93
+=======
+    x: 293
+    y: 91
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     width: 658
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -361,7 +398,11 @@ MonoBehaviour:
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1316, y: 672}
+=======
+  m_LastWindowPixelSize: {x: 658, y: 336}
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -387,16 +428,27 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 61
     y: 93
+=======
+    x: 0
+    y: 91
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     width: 289
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: b02c0000
     m_LastClickedID: 0
     m_ExpandedIDs: 5eadfcff5cb6fcff60c4fdff50c9fdff34cbfdff4ed0fdff9256feffc05bfeffa06afeff546cfeffd473feffbc75feffc877feff247dfeffa080feffe082feffec84feff7287feff188afeff248cfeff0c8efeff1290feffc091feffe2d7feff0ed8feff94d8feff8ee1feff9ae3feffa6e5feff1af8feffc8f9fefffafbfeff2afefeff9687ffffec89ffffc09cffff5cd5ffff88deffff4ce0ffffa4e6ffff0000000076310000d8350000423a0000ce41000038460000d04f0000ea5b0000185f0000e8630000d27d0000
+=======
+    m_SelectedIDs: ea280000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 96fbffff00000000
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -441,8 +493,13 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 354
     y: 93
+=======
+    x: 293
+    y: 91
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     width: 658
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -518,8 +575,13 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 61
     y: 450
+=======
+    x: 0
+    y: 448
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     width: 951
     height: 258
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -535,19 +597,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Scripts
+=======
+    - Assets/Physical Materials
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Physical Materials
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/aniisabihi/Documents/Kandidaten/3DAirHockey
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 35}
     m_SelectedIDs: b02c0000
     m_LastClickedID: 11440
     m_ExpandedIDs: 00000000ee2b0000842c0000b02c0000be2c0000c42c00009e2e0000a02e0000a22e0000a42e0000a62e0000a82e0000aa2e0000ea32000098340000a2340000a6340000bc340000c834000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: be280000
+    m_LastClickedID: 10430
+    m_ExpandedIDs: 00000000c2270000ae2800000a2900004a2900005829000062290000a62b0000a82b0000aa2b0000ac2b0000ae2b0000b02b0000b22b000000ca9a3bffffff7f
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -575,7 +652,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000ee2b0000842c0000b02c0000be2c0000c02c0000c42c00009e2e0000a02e0000a22e0000a42e0000a62e0000a82e0000aa2e0000
+=======
+    m_ExpandedIDs: 00000000c2270000ae2800000a2900004a2900005829000062290000a62b0000a82b0000aa2b0000ac2b0000ae2b0000b02b0000b22b0000
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,8 +760,13 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1016
     y: 93
+=======
+    x: 955
+    y: 91
+>>>>>>> parent of 0917a31... Merge conflict with new scenes
     width: 411
     height: 615
   m_PersistentViewDataDictionary: {fileID: 0}
