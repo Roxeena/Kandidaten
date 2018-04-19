@@ -28,8 +28,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _MKGlowOffSet: 0
-    - _MKGlowPower: 1.25
-    - _MKGlowTexStrength: 3.857143
+    - _MKGlowPower: 1.42
+    - _MKGlowTexStrength: 7.1
     - _RimPower: 1.625
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

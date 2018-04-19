@@ -709,6 +709,10 @@ Prefab:
       propertyPath: m_Name
       value: RedGoal
       objectReference: {fileID: 0}
+    - target: {fileID: 1038749885872204, guid: 14ffac0e8232f7c4299f9151c3da2506, type: 2}
+      propertyPath: m_TagString
+      value: RedGoal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14ffac0e8232f7c4299f9151c3da2506, type: 2}
   m_IsPrefabParent: 0
@@ -1083,6 +1087,10 @@ Prefab:
     - target: {fileID: 4942862077555404, guid: 14ffac0e8232f7c4299f9151c3da2506, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391406216348326, guid: 14ffac0e8232f7c4299f9151c3da2506, type: 2}
+      propertyPath: m_TagString
+      value: BlueGoal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14ffac0e8232f7c4299f9151c3da2506, type: 2}
