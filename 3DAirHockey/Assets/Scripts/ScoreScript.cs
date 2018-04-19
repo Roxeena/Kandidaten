@@ -30,7 +30,7 @@ public class ScoreScript : MonoBehaviour {
         {
             aiScore = value;
             if (value == MaxScore)
-                uiManager.ShowRestartCanvas(true);
+                uiManager.ShowRestartCanvas();
         }
     }
 
@@ -41,7 +41,7 @@ public class ScoreScript : MonoBehaviour {
         {
             playerScore = value;
             if (value == MaxScore)
-                uiManager.ShowRestartCanvas(false);
+                uiManager.ShowRestartCanvas();
         }
     }
 

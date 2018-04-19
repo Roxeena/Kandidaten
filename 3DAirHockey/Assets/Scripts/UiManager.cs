@@ -26,6 +26,8 @@ public class UiManager : MonoBehaviour
     public GameObject blueRestart;
     public GameObject blueWaiting;
 
+    public GameObject tieTxt;
+
     [Header("Other")]
     public AudioManager audioManager;
     public Restart restartScript;
@@ -37,28 +39,40 @@ public class UiManager : MonoBehaviour
     public positionMove BlueMove;
 
 
-    public void ShowRestartCanvas(bool didAiWin)
+    public void ShowRestartCanvas()
     {
         Time.timeScale = 0;
 
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
 
-        if (didAiWin)
+        if (scoreScript.playerScore < scoreScript.aiScore)
         {
             audioManager.PlayLostGame();
             player1WinTxt.SetActive(false);
             player1LoseTxt.SetActive(true);
             player2WinTxt.SetActive(true);
             player2LoseTxt.SetActive(false);
+            tieTxt.SetActive(false);
         }
-        else
+        else if (scoreScript.aiScore < scoreScript.playerScore)
         {
             audioManager.PlayWonGame();
             player1WinTxt.SetActive(true);
             player1LoseTxt.SetActive(false);
             player2WinTxt.SetActive(false);
             player2LoseTxt.SetActive(true);
+            tieTxt.SetActive(false);
+        }
+        else //it was a tie
+        {
+            audioManager.PlayLostGame();
+            player1WinTxt.SetActive(false);
+            player1LoseTxt.SetActive(false);
+            player2WinTxt.SetActive(false);
+            player2LoseTxt.SetActive(false);
+
+            tieTxt.SetActive(true);
         }
     }
 

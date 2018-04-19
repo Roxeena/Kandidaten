@@ -65,7 +65,7 @@ public class timeCounter : MonoBehaviour {
 
                 //Send an event/trigger to the game to notify about the end of the round
                
-                uiManager.ShowRestartCanvas(scoreScript.aiScore > scoreScript.playerScore);
+                uiManager.ShowRestartCanvas();
 
             }
             else
@@ -119,7 +119,7 @@ public class timeCounter : MonoBehaviour {
                 minutesLeft = 0;
                 timerTxt.text = "00:00";
                 //Send an event/trigger to the game to notify about the end of the round
-                uiManager.ShowRestartCanvas(scoreScript.aiScore > scoreScript.playerScore);
+                uiManager.ShowRestartCanvas();
             }
             else
             {                
