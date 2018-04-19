@@ -26,7 +26,7 @@ public class UiManager : MonoBehaviour
 
     [Header("Other")]
     public AudioManager audioManager;
-
+    public Restart restartScript;
     public ScoreScript scoreScript;
     
 
@@ -96,6 +96,7 @@ public class UiManager : MonoBehaviour
 
         if (redReady == 1 && blueReady == 1)
         {
+           
             Time.timeScale = 1;
 
             CanvasGame.SetActive(true);
@@ -107,6 +108,9 @@ public class UiManager : MonoBehaviour
 
             redReady = 0;
             blueReady = 0;
+
+            //reloads the scene, resets score and time.
+            restartScript.Reload_scene();
         }
     }
 }
