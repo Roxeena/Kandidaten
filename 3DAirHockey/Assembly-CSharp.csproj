@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\positionMove.cs" />
      <Compile Include="Assets\Scripts\PowerUpSpawn.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />
+     <Compile Include="Assets\Scripts\Restart.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\ShieldScript.cs" />

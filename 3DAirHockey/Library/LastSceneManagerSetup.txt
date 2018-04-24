@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Neon.unity
+=======
 - path: Assets/Scenes/Classic.unity
+>>>>>>> 269304e9ce085535f85c3bdc53433d84e04ef275
   isLoaded: 1
   isActive: 1
