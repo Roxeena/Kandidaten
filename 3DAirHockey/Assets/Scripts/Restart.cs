@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class Restart : MonoBehaviour {
+    
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -14,6 +17,7 @@ public class Restart : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.R))//restarts the game if "r" is pressed
         {
+
             Reload_scene();
         }
     }

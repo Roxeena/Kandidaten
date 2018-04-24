@@ -55,7 +55,6 @@ public class positionMove : MonoBehaviour {
         if (mouseInput || mouseInputNoMenu)
         {
             RaycastHit vHit = new RaycastHit();
-            var layerMask = 8;
             Ray vRay = c.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(vRay, out vHit, 1000))
             {

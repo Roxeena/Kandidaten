@@ -21,15 +21,27 @@ public class timeCounter : MonoBehaviour {
     private string seconds;
     private float miliSeconds = 0;
 
+    public GameObject countDownTxt;
+    public Text countDownBlue;
+    public Text CountDownRed;
+    public float CountDownTime = 10;
+    private bool restart = true;
+
+    public Light Light1;
+    public Light Light2;
+    public Light Light3;
+    public Light Light4;
+
     public UiManager uiManager; //connect to UiManager to access restart functions
     public ScoreScript scoreScript; //connect to scoreScript to decide winner
+    public GameObject puck;
     
 
 
     // Use this for initialization
     void Start()
     {
-        timerTxt.text = "0"; //initialize the timer to "0"'
+        timerTxt.text = "00:00"; //initialize the timer to "0"'
         if(countDown)
         {
             minutesLeft = Mathf.Floor(gameTime); //the time left is initalized to the gameTime
@@ -44,12 +56,33 @@ public class timeCounter : MonoBehaviour {
         minutes = minutesLeft.ToString();
         seconds = secondsLeft.ToString();
         timerTxt.text = string.Concat(string.Concat(minutes, ":"), seconds);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (countDown)
+        if(restart)
+        {
+            
+            countDownTxt.SetActive(true);            
+
+            countDownBlue.text = Mathf.Floor(CountDownTime+1).ToString();
+            countDownBlue.fontSize = 300;
+            CountDownRed.text = Mathf.Floor(CountDownTime+1).ToString();
+            CountDownRed.fontSize = 300;
+
+            CountDownTime = (CountDownTime - Time.deltaTime) ;
+
+            if (CountDownTime < 0)
+            {
+                restart = false;
+                countDownTxt.SetActive(false);
+                puck.SetActive(true);
+            }
+
+        }
+        else if (countDown)
         {
             if (minutesLeft < 0 || (minutesLeft == 0 && secondsLeft == 0)) //time is out
             {
@@ -85,7 +118,29 @@ public class timeCounter : MonoBehaviour {
                     seconds = Mathf.Floor(miliSeconds).ToString();
                     if (secondsLeft < 10) //add "0" before minutes if secondsLeft < 10
                     {
+                        if (secondsLeft < 5)
+                        {
+                            countDownTxt.SetActive(true);
+
+                            Light1.color = Color.red;
+                            Light2.color = Color.red;
+                            Light3.color = Color.red;
+                            Light4.color = Color.red;
+
+                            Light1.intensity = 0.5f;
+                            Light2.intensity = 0.5f;
+                            Light3.intensity = 0.5f;
+                            Light4.intensity = 0.5f;
+                           
+                            countDownBlue.text = Mathf.Floor(secondsLeft+1).ToString();
+                            countDownBlue.fontSize = 600;
+                            CountDownRed.text = Mathf.Floor(secondsLeft + 1).ToString();
+                            CountDownRed.fontSize = 600;
+
+                            // countDownTxt.SetActive(false);
+                        }
                         minutes = string.Concat("0", minutes);
+                        
                     }
                     if (miliSeconds < 10) //add "0" before seconds if miliseconds  < 10
                     {

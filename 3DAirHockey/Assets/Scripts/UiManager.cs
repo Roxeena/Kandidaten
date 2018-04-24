@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System.Collections;
 
 /* Author: 
  * Last change date: 
@@ -20,14 +22,16 @@ public class UiManager : MonoBehaviour
     public GameObject player1LoseTxt;
     public GameObject redRestart;
     public GameObject redWaiting;
+    public Text redPoints;
 
     public GameObject player2WinTxt;
     public GameObject player2LoseTxt;
     public GameObject blueRestart;
     public GameObject blueWaiting;
+    public Text bluePoints;
 
     public GameObject tieTxt;
-
+    
     [Header("Other")]
     public AudioManager audioManager;
     public Restart restartScript;
@@ -45,6 +49,9 @@ public class UiManager : MonoBehaviour
 
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
+
+        redPoints.text = scoreScript.playerScore.ToString() +" poäng!";
+        bluePoints.text = scoreScript.aiScore.ToString() + " poäng!";
 
         if (scoreScript.playerScore < scoreScript.aiScore)
         {
@@ -99,26 +106,11 @@ public class UiManager : MonoBehaviour
 
         if (redReady == 1 && blueReady == 1)
         {
-           
+          
             Time.timeScale = 1;
-
-            CanvasGame.SetActive(true);
-            CanvasRestart.SetActive(false);
-            RedMove.ResetPosition();
-            BlueMove.ResetPosition();
-            scoreScript.ResetScores();
-            puckScript.CenterPuck();
-
-            redRestart.SetActive(true);
-            redWaiting.SetActive(false);
-            blueRestart.SetActive(true);
-            blueWaiting.SetActive(false);
-
-            redReady = 0;
-            blueReady = 0;
-
+            
             //reloads the scene, resets score and time.
             restartScript.Reload_scene();
         }
-    }
+    }   
 }
