@@ -40,7 +40,7 @@ public class PowerUpSpawn : MonoBehaviour {
 
             //Count down the cooldown time
             cooldownTime -= Time.deltaTime;
-            Debug.Log("Cooldown:" + cooldownTime);
+            //Debug.Log("Cooldown:" + cooldownTime);
 
             //If the cooldown is over, turn it off
             if (cooldownTime < precision)
