@@ -28,13 +28,20 @@ public class ExpandScript : MonoBehaviour
     //Function to activate the expand based on who picked up the power up object
     public void activateExpand(bool didRedPickUp)
     {
+        //If this kind of power up is already active for the player who picked up the object
+        //Then only add more time to that persons power up
+        if (didRedPickUp && RedExpandOn)
+            ExpandTimeRed += PUpTime;
+        else if (!didRedPickUp && BlueExpandOn)
+            ExpandTimeBlue += PUpTime;
+
         //Depending on who picked up the object activate the expand for that striker
-        if (didRedPickUp)
+        if (didRedPickUp && !RedExpandOn)
         {
             RedStriker.gameObject.transform.localScale *= 1.5f; 
             RedExpandOn = true;
         }
-        else
+        else if(!didRedPickUp && !BlueExpandOn)
         {
             BlueStriker.gameObject.transform.localScale *= 1.5f;
             BlueExpandOn = true;
