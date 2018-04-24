@@ -73,19 +73,19 @@ public class PuckScript : MonoBehaviour {
         //Shield
         if(col.tag == "ShieldUp")
         {
-            Destroy(col.gameObject);
+            col.gameObject.SetActive(false);
             Shield.activateShield(didRedStrike);
         }
         //Expand
         else if(col.tag == "ExpandOn")
         {
-            Destroy(col.gameObject);
+            col.gameObject.SetActive(false);
             Expand.activateExpand(didRedStrike);
         }
         //Shrink
         else if(col.tag == "ShrinkOn")
         {
-            Destroy(col.gameObject);        
+            col.gameObject.SetActive(false);
             Shrink.activateShrink(didRedStrike);
         }
     }

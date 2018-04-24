@@ -28,20 +28,13 @@ public class ShrinkScript : MonoBehaviour
     //Function to activate the shrink based on who picked up the power up object
     public void activateShrink(bool didRedPickUp)
     {
-        //If this kind of power up is already active for the player who picked up the object
-        //Then only add more time to that persons power up
-        if (didRedPickUp && RedShrinkOn)
-            ShrinkTimeRed += PUpTime;
-        else if (!didRedPickUp && BlueShrinkOn)
-            ShrinkTimeBlue += PUpTime;
-
         //Depending on who picked up the object activate the shrink for that striker
-        if (didRedPickUp && !RedShrinkOn)
+        if (didRedPickUp)
         {
             RedStriker.gameObject.transform.localScale *= 0.5f;
             RedShrinkOn = true;
         }
-        else if (!didRedPickUp && !BlueShrinkOn)
+        else
         {
             BlueStriker.gameObject.transform.localScale *= 0.5f;
             BlueShrinkOn = true;
