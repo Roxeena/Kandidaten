@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-/* Author: Emilie Ho
- * Last change date: 2018-04-17
- * Checked by: Malin Ejdbo
- * Date of check: 2018-04-17
- * Comment: Looks good!
+/* Author: Emilie Ho && Malin Ejdbo
+ * Last change date: 2018-04-25
+ * Checked by: 
+ * Date of check: 
+ * Comment: 
 */
 
 //Power up class that shrinks the striker for the player who picked up the power up object
@@ -28,14 +28,22 @@ public class ShrinkScript : MonoBehaviour
     //Function to activate the shrink based on who picked up the power up object
     public void activateShrink(bool didRedPickUp)
     {
+        //If a player with an already active shrink picks up another shrink object, extend the time instead of stacking the power ups
+        if (didRedPickUp && RedShrinkOn)
+            ShrinkTimeRed += PUpTime;
+        else if (!didRedPickUp && BlueShrinkOn)
+            ShrinkTimeBlue += PUpTime;
+
         //Depending on who picked up the object activate the shrink for that striker
-        if (didRedPickUp)
+        if (didRedPickUp && !RedShrinkOn)
         {
+            ShrinkTimeRed = PUpTime;
             RedStriker.gameObject.transform.localScale *= 0.5f;
             RedShrinkOn = true;
         }
-        else
+        else if (!didRedPickUp && !BlueShrinkOn)
         {
+            ShrinkTimeBlue = PUpTime;
             BlueStriker.gameObject.transform.localScale *= 0.5f;
             BlueShrinkOn = true;
         }

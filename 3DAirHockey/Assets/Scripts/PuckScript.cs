@@ -2,7 +2,7 @@
 using UnityEngine;
 
 /* Author: Malin Ejdbo
- * Last change date: 2018-04-13
+ * Last change date: 2018-04-25
  * Checked by: 
  * Date of check: 
  * Comment: 
@@ -73,19 +73,19 @@ public class PuckScript : MonoBehaviour {
         //Shield
         if(col.tag == "ShieldUp")
         {
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
             Shield.activateShield(didRedStrike);
         }
         //Expand
         else if(col.tag == "ExpandOn")
         {
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
             Expand.activateExpand(didRedStrike);
         }
         //Shrink
         else if(col.tag == "ShrinkOn")
         {
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
             Shrink.activateShrink(didRedStrike);
         }
     }
