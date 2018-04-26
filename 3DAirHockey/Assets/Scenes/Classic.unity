@@ -802,7 +802,7 @@ MonoBehaviour:
   timerTxt: {fileID: 1039748031}
   countDown: 1
   repeat: 1
-  gameTime: 1
+  gameTime: 0.7
   countDownTxt: {fileID: 85369186}
   countDownBlue: {fileID: 85369188}
   CountDownRed: {fileID: 1774707667}
@@ -3522,8 +3522,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.9671999
-  m_Center: {x: -0.0013000368, y: 0.0197, z: -0.0010499953}
+  m_Radius: 2
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &1566383745
 MonoBehaviour:
   m_ObjectHideFlags: 0

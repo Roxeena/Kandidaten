@@ -140,14 +140,15 @@ public class PuckScript : MonoBehaviour {
     }
 
 	/* //Debug code
-     // Update is called once per frame
+     // Update is called once per frame    */
 	void Update () {
 
         //debugcode
         if(puck.velocity.y > 0)
         {
-           // Debug.Log(puck.velocity.y);
+            // Debug.Log(puck.velocity.y);
+            puck.velocity = new Vector3(puck.velocity.x, 0.0f, puck.velocity.z);
         }		
 	}
-    */
+
 }

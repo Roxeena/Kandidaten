@@ -271,7 +271,6 @@ public class positionMove : MonoBehaviour {
         {
             rb.position = new Vector3(0, 0.1f, 2.5f);
             rb.velocity = Vector3.zero;
-            Debug.Log("Red Reset");
             inControl = false;
         }
 
@@ -279,7 +278,6 @@ public class positionMove : MonoBehaviour {
         {
             rb.position = new Vector3(0, 0.1f, -2.5f);
             rb.velocity = Vector3.zero;
-            Debug.Log("Blue Reset");
             inControl = false;
         }
     }
@@ -291,7 +289,6 @@ public class positionMove : MonoBehaviour {
         {
             rb.position = new Vector3(0, 0.1f, 3.5f);
             rb.velocity = Vector3.zero;
-            Debug.Log("Red Serve");
             inControl = false;
         }
 
@@ -299,7 +296,6 @@ public class positionMove : MonoBehaviour {
         {
             rb.position = new Vector3(0, 0.1f, -3.5f);
             rb.velocity = Vector3.zero;
-            Debug.Log("Blue Serve");
             inControl = false;
         }
     }

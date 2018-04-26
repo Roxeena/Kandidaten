@@ -90,7 +90,6 @@ public class UiManager : MonoBehaviour
     {
         if (EventSystem.current.currentSelectedGameObject.name == "RestartBtnRed")
         {
-            print("Red Ready");
             redReady = 1;
             redRestart.SetActive(false);
             redWaiting.SetActive(true);
@@ -98,7 +97,6 @@ public class UiManager : MonoBehaviour
 
         if (EventSystem.current.currentSelectedGameObject.name == "RestartBtnBlue")
         {
-            print("Blue Ready");
             blueReady = 1;
             blueRestart.SetActive(false);
             blueWaiting.SetActive(true);
