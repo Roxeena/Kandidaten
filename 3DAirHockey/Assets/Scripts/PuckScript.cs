@@ -123,19 +123,20 @@ public class PuckScript : MonoBehaviour {
     }
 
     //when puck is inside another object, like the striker
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    //inverse the pucks velocity so it hopefully leaves the object it infringes upon.
-    //    if(collision.collider.tag == "RedPlayer" || collision.collider.tag == "BluePlayer")
-    //    {
-    //        SphereCollider c = collision.gameObject.GetComponent<SphereCollider>();
-    //        Vector3 distance = puck.position - collision.rigidbody.position;
-    //        Vector3 infringement = distance - distance.normalized * c.radius;
-    //        puck.MovePosition(puck.position - infringement);
-    //        puck.velocity *= -1.0f;              
-    //    }
-         
-    //}
+    private void OnCollisionStay(Collision collision)
+    {
+        //inverse the pucks velocity so it hopefully leaves the object it infringes upon.
+        if (collision.collider.tag == "RedPlayer" || collision.collider.tag == "BluePlayer")
+        {
+            SphereCollider c = collision.gameObject.GetComponent<SphereCollider>();
+            Vector3 distance = puck.position - collision.rigidbody.position;
+            Vector3 infringement = distance - distance.normalized * c.radius;
+            puck.velocity.Scale( distance);
+            //puck.MovePosition(puck.position - infringement);
+            //puck.velocity *= -1.0f;
+        }
+
+    }
 
     //Reset the puck after a small delay, reset material on puck
     private IEnumerator ResetPuck(bool didPlayerRedScore)
