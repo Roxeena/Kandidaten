@@ -23,6 +23,7 @@ public class PuckScript : MonoBehaviour {
     public Material RedMat, BlueMat, PuckMat;           //Material the puck changes between depending on who struck it last
     public AudioManager audioManager;                   //To play sound on a collision
     public positionMove RedMove, BlueMove;              //Scripts that determine how the players move, used to reset players after goal
+    public float maxVelocity = 100;
 
     // Use this for initialization
 	void Start () {
@@ -148,7 +149,13 @@ public class PuckScript : MonoBehaviour {
         {
             // Debug.Log(puck.velocity.y);
             puck.velocity = new Vector3(puck.velocity.x, 0.0f, puck.velocity.z);
+
         }		
+
+        if(puck.velocity.magnitude > maxVelocity)
+        {
+            puck.velocity = puck.velocity.normalized * maxVelocity;
+        }
 	}
 
 }
