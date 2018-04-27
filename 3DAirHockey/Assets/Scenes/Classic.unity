@@ -1926,6 +1926,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 99deb467ea790d443a757798469cba91, type: 2}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: puckScript
+      value: 
+      objectReference: {fileID: 1566383745}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
   m_IsPrefabParent: 0
@@ -3548,6 +3553,7 @@ MonoBehaviour:
   audioManager: {fileID: 201317315}
   RedMove: {fileID: 1764497462}
   BlueMove: {fileID: 325832008}
+  maxVelocity: 100
 --- !u!96 &1566383746
 TrailRenderer:
   serializedVersion: 2
@@ -4059,6 +4065,11 @@ Prefab:
       propertyPath: m_TagString
       value: BluePlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: puckScript
+      value: 
+      objectReference: {fileID: 1566383745}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
   m_IsPrefabParent: 0

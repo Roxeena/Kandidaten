@@ -93,29 +93,49 @@ public class PuckScript : MonoBehaviour {
 
     //When the puck collides with a collider that is not set as a trigger
     private void OnCollisionEnter(Collision collision)
+    {        
+        puckHit(collision.collider);
+    }
+
+    public void puckHit( Collider c)
     {
+
         //Play audio
         audioManager.PlayPuckCollision();
 
         // Check which player struck the puck, change color 
-        if (collision.collider.tag == "RedPlayer")
+        if (c.tag == "RedPlayer")
         {
             didRedStrike = true;
             puck.GetComponent<Renderer>().material = RedMat;
         }
-        else if (collision.collider.tag == "BluePlayer")
+        else if (c.tag == "BluePlayer")
         {
             didRedStrike = false;
             puck.GetComponent<Renderer>().material = BlueMat;
         }
 
         // Check if the puck collided with a shield, if so the decrements its lives
-        if (collision.collider.tag == "RedShield")
+        if (c.tag == "RedShield")
             Shield.decrement(true);
-        else if (collision.collider.tag == "BlueShield")
+        else if (c.tag == "BlueShield")
             Shield.decrement(false);
-
     }
+
+    //when puck is inside another object, like the striker
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    //inverse the pucks velocity so it hopefully leaves the object it infringes upon.
+    //    if(collision.collider.tag == "RedPlayer" || collision.collider.tag == "BluePlayer")
+    //    {
+    //        SphereCollider c = collision.gameObject.GetComponent<SphereCollider>();
+    //        Vector3 distance = puck.position - collision.rigidbody.position;
+    //        Vector3 infringement = distance - distance.normalized * c.radius;
+    //        puck.MovePosition(puck.position - infringement);
+    //        puck.velocity *= -1.0f;              
+    //    }
+         
+    //}
 
     //Reset the puck after a small delay, reset material on puck
     private IEnumerator ResetPuck(bool didPlayerRedScore)
