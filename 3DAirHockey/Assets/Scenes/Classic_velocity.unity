@@ -1934,6 +1934,11 @@ Prefab:
     - target: {fileID: 54450963410484260, guid: 042316cc38ac06a4399f1fcdbee31eee,
         type: 2}
       propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: velocityMovement
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3659,7 +3664,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566383739}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.1
   m_UseGravity: 1
@@ -4078,6 +4083,16 @@ Prefab:
     - target: {fileID: 54450963410484260, guid: 042316cc38ac06a4399f1fcdbee31eee,
         type: 2}
       propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: velocityMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: mouseInput
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
