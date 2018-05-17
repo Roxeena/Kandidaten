@@ -336,7 +336,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -1724,7 +1724,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -1991,7 +1991,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -2399,7 +2399,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -3842,9 +3842,9 @@ MonoBehaviour:
   - {fileID: 149666454}
   - {fileID: 355920773}
   prefeb:
-  - {fileID: 1383922346332012, guid: c3d767ad516627745bf4cea53bdd8f56, type: 2}
-  - {fileID: 1383922346332012, guid: 2b2fb9978ea7c724681c7157b888d997, type: 2}
-  - {fileID: 1383922346332012, guid: 677430c5595143c499c90ebf888a9005, type: 2}
+  - {fileID: 1383922346332012, guid: e7fedb26c007640b791d83f7fc5caaeb, type: 2}
+  - {fileID: 1383922346332012, guid: 37dfe3c126fa04f939e657806729a525, type: 2}
+  - {fileID: 1383922346332012, guid: dc2e1d88ee10e494fae3207fdc7248af, type: 2}
   maxCooldown: 20
   minCooldown: 5
 --- !u!114 &1611618101

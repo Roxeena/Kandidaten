@@ -336,7 +336,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -1079,7 +1079,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.043137256, g: 0.04705883, b: 0.050980397, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1735,7 +1735,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -2002,7 +2002,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -2410,7 +2410,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: 2
     m_CustomResolution: -1
     m_Strength: 1
@@ -3636,10 +3636,10 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.16
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.5
+    widthMultiplier: 0.7
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -3725,7 +3725,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4284938869
-  m_Size: 1.15
+  m_Size: 1.1
 --- !u!1 &1581374251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3876,9 +3876,9 @@ MonoBehaviour:
   - {fileID: 149666454}
   - {fileID: 355920773}
   prefeb:
-  - {fileID: 1383922346332012, guid: c3d767ad516627745bf4cea53bdd8f56, type: 2}
-  - {fileID: 1383922346332012, guid: 2b2fb9978ea7c724681c7157b888d997, type: 2}
-  - {fileID: 1383922346332012, guid: 677430c5595143c499c90ebf888a9005, type: 2}
+  - {fileID: 1383922346332012, guid: a6e70c41381ff42018bd97ecc072603f, type: 2}
+  - {fileID: 1383922346332012, guid: 3360a4abd27c04d12bd9993c3e1dc0b5, type: 2}
+  - {fileID: 1383922346332012, guid: e8728acca164646f083814b2ccfedf98, type: 2}
   maxCooldown: 20
   minCooldown: 5
 --- !u!114 &1611618101
