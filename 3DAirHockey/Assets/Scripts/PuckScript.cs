@@ -2,7 +2,7 @@
 using UnityEngine;
 
 /* Author: Malin Ejdbo
- * Last change date: 2018-04-13
+ * Last change date: 2018-04-25
  * Checked by: 
  * Date of check: 
  * Comment: 
@@ -23,6 +23,7 @@ public class PuckScript : MonoBehaviour {
     public Material RedMat, BlueMat, PuckMat;           //Material the puck changes between depending on who struck it last
     public AudioManager audioManager;                   //To play sound on a collision
     public positionMove RedMove, BlueMove;              //Scripts that determine how the players move, used to reset players after goal
+    public float maxVelocity = 100;
 
     // Use this for initialization
 	void Start () {
@@ -73,46 +74,67 @@ public class PuckScript : MonoBehaviour {
         //Shield
         if(col.tag == "ShieldUp")
         {
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
             Shield.activateShield(didRedStrike);
         }
         //Expand
         else if(col.tag == "ExpandOn")
         {
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
             Expand.activateExpand(didRedStrike);
         }
         //Shrink
         else if(col.tag == "ShrinkOn")
         {
-            col.gameObject.SetActive(false);
+            Destroy(col.gameObject);
             Shrink.activateShrink(didRedStrike);
         }
     }
 
     //When the puck collides with a collider that is not set as a trigger
     private void OnCollisionEnter(Collision collision)
+    {        
+        puckHit(collision.collider);
+    }
+
+    public void puckHit( Collider c)
     {
+
         //Play audio
         audioManager.PlayPuckCollision();
 
         // Check which player struck the puck, change color 
-        if (collision.collider.tag == "RedPlayer")
+        if (c.tag == "RedPlayer")
         {
             didRedStrike = true;
             puck.GetComponent<Renderer>().material = RedMat;
         }
-        else if (collision.collider.tag == "BluePlayer")
+        else if (c.tag == "BluePlayer")
         {
             didRedStrike = false;
             puck.GetComponent<Renderer>().material = BlueMat;
         }
 
         // Check if the puck collided with a shield, if so the decrements its lives
-        if (collision.collider.tag == "RedShield")
+        if (c.tag == "RedShield")
             Shield.decrement(true);
-        else if (collision.collider.tag == "BlueShield")
+        else if (c.tag == "BlueShield")
             Shield.decrement(false);
+    }
+
+    //when puck is inside another object, like the striker
+    private void OnCollisionStay(Collision collision)
+    {
+        //inverse the pucks velocity so it hopefully leaves the object it infringes upon.
+        if (collision.collider.tag == "RedPlayer" || collision.collider.tag == "BluePlayer")
+        {
+            SphereCollider c = collision.gameObject.GetComponent<SphereCollider>();
+            Vector3 distance = puck.position - collision.rigidbody.position;
+            Vector3 infringement = distance - distance.normalized * c.radius;
+            puck.velocity.Scale( distance);
+            //puck.MovePosition(puck.position - infringement);
+            //puck.velocity *= -1.0f;
+        }
 
     }
 
@@ -140,14 +162,21 @@ public class PuckScript : MonoBehaviour {
     }
 
 	/* //Debug code
-     // Update is called once per frame
+     // Update is called once per frame    */
 	void Update () {
 
         //debugcode
         if(puck.velocity.y > 0)
         {
-           // Debug.Log(puck.velocity.y);
+            // Debug.Log(puck.velocity.y);
+            puck.velocity = new Vector3(puck.velocity.x, 0.0f, puck.velocity.z);
+
         }		
+
+        if(puck.velocity.magnitude > maxVelocity)
+        {
+            puck.velocity = puck.velocity.normalized * maxVelocity;
+        }
 	}
-    */
+
 }

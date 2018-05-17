@@ -12,6 +12,9 @@ TagManager:
   - ShieldUp
   - ShrinkOn
   - ExpandOn
+  - CanvasRestart
+  - RedShield
+  - BlueShield
   layers:
   - Default
   - TransparentFX

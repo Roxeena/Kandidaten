@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-/* Author: Emilie Ho
- * Last change date: 2018-04-17
- * Checked by: Malin Ejdbo
- * Date of check: 2018-04-17
- * Comment: Looks good!
+/* Author: Emilie Ho && Malin Ejdbo
+ * Last change date: 2018-04-25
+ * Checked by: 
+ * Date of check: 
+ * Comment: 
 */
 
 //Power up class that expands the striker for the player who picked up the power up object
@@ -28,14 +28,22 @@ public class ExpandScript : MonoBehaviour
     //Function to activate the expand based on who picked up the power up object
     public void activateExpand(bool didRedPickUp)
     {
+        //If a player with an already active expand picks up another expand object, extend the time instead of stacking the power ups
+        if (didRedPickUp && RedExpandOn)
+            ExpandTimeRed += PUpTime;
+        else if (!didRedPickUp && BlueExpandOn)
+            ExpandTimeBlue += PUpTime;
+
         //Depending on who picked up the object activate the expand for that striker
-        if (didRedPickUp)
+        if (didRedPickUp && !RedExpandOn)
         {
+            ExpandTimeRed = PUpTime;
             RedStriker.gameObject.transform.localScale *= 1.5f; 
             RedExpandOn = true;
         }
-        else
+        else if(!didRedPickUp && !BlueExpandOn)
         {
+            ExpandTimeBlue = PUpTime;
             BlueStriker.gameObject.transform.localScale *= 1.5f;
             BlueExpandOn = true;
         }
