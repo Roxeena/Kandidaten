@@ -50,8 +50,8 @@ public class UiManager : MonoBehaviour
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
 
-        redPoints.text = scoreScript.playerScore.ToString() +" poäng!";
-        bluePoints.text = scoreScript.aiScore.ToString() + " poäng!";
+        redPoints.text = scoreScript.playerScore.ToString() +" POÄNG!";
+        bluePoints.text = scoreScript.aiScore.ToString() + " POÄNG!";
 
         if (scoreScript.playerScore < scoreScript.aiScore)
         {

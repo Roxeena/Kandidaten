@@ -141,6 +141,8 @@
     <None Include="Assets\Art\Neon\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Transparent\MK_Transparent-DiffuseBumped.shader" />
     <None Include="Assets\Art\Neon\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Transparent\MK_Transparent-Glossy.shader" />
     <None Include="Assets\Art\Neon\_MK\MKGlowFree\Shader\Variants_SelectiveMode\UI\MK_UI_Default.shader" />
+    <None Include="Assets\menu\Font\OFL.txt" />
+    <None Include="Assets\menu\Font\UFL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
