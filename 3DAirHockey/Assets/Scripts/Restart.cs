@@ -25,10 +25,10 @@ public class Restart : MonoBehaviour {
     public void Reload_scene()
     {
         if (SceneManager.GetActiveScene().name == "Classic")
-            SceneManager.LoadScene("Fotboll");
-        if (SceneManager.GetActiveScene().name == "Fotboll")
             SceneManager.LoadScene("Neon");
         if (SceneManager.GetActiveScene().name == "Neon")
+            SceneManager.LoadScene("Fotboll");
+        if (SceneManager.GetActiveScene().name == "Fotboll")
             SceneManager.LoadScene("Candy");
         if (SceneManager.GetActiveScene().name == "Candy")
             SceneManager.LoadScene("Classic");

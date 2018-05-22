@@ -189,15 +189,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1265,7 +1265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 380}
+  m_AnchoredPosition: {x: 420, y: 400}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &508790977
@@ -1288,9 +1288,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
+    m_FontSize: 55
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -1298,9 +1298,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Tryck \"REDO\" f\xF6r omstart"
+  m_Text: "Ny omg\xE5ng?\nMarkera dig som redo"
 --- !u!222 &508790978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1420,9 +1420,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 5bfa932803d16d74fa6e0640fa4c013f, type: 3}
     m_FontSize: 170
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Du vann!
 --- !u!222 &570949094
@@ -2057,9 +2057,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
     m_FontSize: 150
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -2067,9 +2067,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "0 po\xE4ng!"
+  m_Text: "0 PO\xC4NG!"
 --- !u!222 &881581918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2326,9 +2326,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 5bfa932803d16d74fa6e0640fa4c013f, type: 3}
     m_FontSize: 170
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 170
@@ -2336,7 +2336,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Du f\xF6rlorade!"
 --- !u!222 &1044315351
@@ -2482,9 +2482,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
     m_FontSize: 50
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -2492,7 +2492,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "V\xE4ntar p\xE5 motst\xE5ndare"
 --- !u!222 &1095026263
@@ -2871,9 +2871,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
     m_FontSize: 150
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -2881,9 +2881,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "0 po\xE4ng!"
+  m_Text: "0 PO\xC4NG!"
 --- !u!222 &1260496518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2946,9 +2946,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 5bfa932803d16d74fa6e0640fa4c013f, type: 3}
     m_FontSize: 170
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 170
@@ -2956,7 +2956,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Oavgjort!
 --- !u!222 &1266663185
@@ -3216,9 +3216,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 5bfa932803d16d74fa6e0640fa4c013f, type: 3}
     m_FontSize: 170
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -3226,7 +3226,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Du vann!
 --- !u!222 &1416041539
@@ -3874,9 +3874,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 5bfa932803d16d74fa6e0640fa4c013f, type: 3}
     m_FontSize: 170
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 170
@@ -3884,7 +3884,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Du f\xF6rlorade!"
 --- !u!222 &1647229739
@@ -3966,7 +3966,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
     m_FontSize: 110
     m_FontStyle: 1
     m_BestFit: 0
@@ -3976,7 +3976,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: REDO
 --- !u!222 &1675896803
@@ -4163,7 +4163,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
     m_FontSize: 110
     m_FontStyle: 1
     m_BestFit: 0
@@ -4173,7 +4173,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: REDO
 --- !u!222 &1758659433
@@ -4322,9 +4322,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
     m_FontSize: 50
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -4332,7 +4332,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "V\xE4ntar p\xE5 motst\xE5ndare"
 --- !u!222 &1823710254
@@ -4457,9 +4457,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
+    m_Font: {fileID: 12800000, guid: 5bfa932803d16d74fa6e0640fa4c013f, type: 3}
     m_FontSize: 170
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 170
@@ -4508,7 +4508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -380}
+  m_AnchoredPosition: {x: -420, y: -400}
   m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2127855451
@@ -4531,9 +4531,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9182b3824f06f91418193acdd574cd88, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: 8f817052ba12f0b4e96470d7e1339ed7, type: 3}
+    m_FontSize: 55
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 170
@@ -4541,9 +4541,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Tryck \"REDO\" f\xF6r omstart"
+  m_Text: "Ny omg\xE5ng?\nMarkera dig som redo"
 --- !u!222 &2127855452
 CanvasRenderer:
   m_ObjectHideFlags: 0
