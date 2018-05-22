@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Candy.unity
+- path: Assets/Scenes/Neon.unity
   isLoaded: 1
   isActive: 1
