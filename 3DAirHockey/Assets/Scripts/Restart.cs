@@ -24,6 +24,14 @@ public class Restart : MonoBehaviour {
 
     public void Reload_scene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name == "Classic")
+            SceneManager.LoadScene("Neon");
+        if (SceneManager.GetActiveScene().name == "Neon")
+            SceneManager.LoadScene("Fotboll");
+        if (SceneManager.GetActiveScene().name == "Fotboll")
+            SceneManager.LoadScene("Candy");
+        if (SceneManager.GetActiveScene().name == "Candy")
+            SceneManager.LoadScene("Classic");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
