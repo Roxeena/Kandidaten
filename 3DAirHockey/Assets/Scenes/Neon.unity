@@ -1947,6 +1947,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: mouseInputNoMenu
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
   m_IsPrefabParent: 0
@@ -4119,6 +4124,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e3826e3643ccd3546bf805eeffc26d75, type: 2}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: mouseInputNoMenu
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
   m_IsPrefabParent: 0

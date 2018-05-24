@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Neon.unity
+- path: Assets/Scenes/Classic.unity
   isLoaded: 1
   isActive: 1
