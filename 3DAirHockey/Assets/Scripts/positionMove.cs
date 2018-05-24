@@ -13,7 +13,7 @@ public class positionMove : MonoBehaviour {
     private Rigidbody rb;
     private int finger;
     private bool aboutToCollide;
-    private float distanceToCollision;
+    private float distanceToCollision, activeTime = 0.0f;
     private Collider col;
 
     public Collider Puck;     //used to add force to puck when it's hit
@@ -23,6 +23,8 @@ public class positionMove : MonoBehaviour {
     public PuckScript puckScript; //allows us to call public functions of the puck script
     public bool velocityMovement;
     public float MagicFloat = 3.0f;
+
+    public Inactivity inactivityScript;
 
     // Use this for initialization
     void Start ()
@@ -53,6 +55,7 @@ public class positionMove : MonoBehaviour {
     private void Update()
     {
         rb.velocity = Vector3.zero;
+        activeTime += Time.deltaTime;
 
         //move to FixedUpdate?
         if (mouseInput || mouseInputNoMenu)
@@ -80,6 +83,7 @@ public class positionMove : MonoBehaviour {
             //While inCOntrol the gameOmbject will follow the mouse 
             if (inControl)
             {
+                inactivityScript.UpdateActivity(activeTime);
                 float distance_to_screen = c.WorldToScreenPoint(gameObject.transform.position).z;
                 Vector3 mousePos = c.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
 
@@ -185,6 +189,7 @@ public class positionMove : MonoBehaviour {
             //While inCOntrol the gameOmbject will follow the touch input
             if (inControl)
             {
+                inactivityScript.UpdateActivity(activeTime);
                 Touch touchControl = touch;
                 bool found = false;
                 foreach (Touch t in Input.touches)

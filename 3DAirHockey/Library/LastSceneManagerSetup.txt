@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Neon.unity
-=======
-- path: Assets/Scenes/menu.unity
->>>>>>> c0b452db9f51440bb7a508ab2415c3a1f9dda74a
   isLoaded: 1
   isActive: 1
