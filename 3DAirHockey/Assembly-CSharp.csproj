@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\DevCanvas.cs" />
      <Compile Include="Assets\Scripts\ExpandScript.cs" />
      <Compile Include="Assets\Scripts\fpsCountScript.cs" />
+     <Compile Include="Assets\Scripts\Inactivity.cs" />
      <Compile Include="Assets\Scripts\positionMove.cs" />
      <Compile Include="Assets\Scripts\PowerUpSpawn.cs" />
      <Compile Include="Assets\Scripts\PuckScript.cs" />

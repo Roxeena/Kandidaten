@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 201317314}
   - component: {fileID: 201317317}
   - component: {fileID: 201317318}
+  - component: {fileID: 201317319}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -643,7 +644,7 @@ MonoBehaviour:
   playerRedTxt: {fileID: 79318172}
   playerBlueTxt: {fileID: 571788931}
   uiManager: {fileID: 201317316}
-  MaxScore: -1
+  MaxScore: 5
   aiScore: 0
   playerScore: 0
 --- !u!4 &201317313
@@ -825,6 +826,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610c1450f653e98418d921196a1fa1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &201317319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201317311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43185ff5bf0232347804e3e74ea716ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inactiveTime: 20
 --- !u!1 &248676792 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1419526467760944, guid: 042316cc38ac06a4399f1fcdbee31eee,
@@ -1952,6 +1965,11 @@ Prefab:
       propertyPath: mouseInputNoMenu
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: inactivityScript
+      value: 
+      objectReference: {fileID: 201317319}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
   m_IsPrefabParent: 0
@@ -4129,6 +4147,11 @@ Prefab:
       propertyPath: mouseInputNoMenu
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114888791336793524, guid: 042316cc38ac06a4399f1fcdbee31eee,
+        type: 2}
+      propertyPath: inactivityScript
+      value: 
+      objectReference: {fileID: 201317319}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042316cc38ac06a4399f1fcdbee31eee, type: 2}
   m_IsPrefabParent: 0
