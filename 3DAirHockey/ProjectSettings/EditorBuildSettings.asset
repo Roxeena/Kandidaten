@@ -9,5 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: fb3de6f0d12c3084ca9108a070acf2ab
   - enabled: 1
-    path: Assets/Scenes/3DAirHockey.unity
+    path: Assets/Scenes/Classic.unity
     guid: 9ecfeb659ba9bfe4589241f83fb2820e
+  - enabled: 1
+    path: Assets/Scenes/Fotboll.unity
+    guid: bab34fee0a6084264a0ca76cb0fdefce
+  - enabled: 1
+    path: Assets/Scenes/Neon.unity
+    guid: 708d47a901f334d08adb85801dd1396a
+  - enabled: 1
+    path: Assets/Scenes/Candy.unity
+    guid: c0670cf4863b2443f902a2e3582d396b
