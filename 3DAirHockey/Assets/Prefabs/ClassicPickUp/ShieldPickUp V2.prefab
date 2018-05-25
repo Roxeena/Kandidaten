@@ -36,9 +36,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4753421654357060}
-  - component: {fileID: 114453481310373348}
   - component: {fileID: 54340746744296288}
   - component: {fileID: 135614132942354414}
+  - component: {fileID: 114248172313866426}
   m_Layer: 0
   m_Name: ShieldPickUp V2
   m_TagString: ShieldUp
@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153423676690070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4090863378779590}
@@ -201,7 +201,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &114453481310373348
+--- !u!114 &114248172313866426
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

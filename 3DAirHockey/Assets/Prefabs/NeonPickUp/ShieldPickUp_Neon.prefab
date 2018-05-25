@@ -36,10 +36,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4753421654357060}
-  - component: {fileID: 114453481310373348}
   - component: {fileID: 54340746744296288}
   - component: {fileID: 135614132942354414}
   - component: {fileID: 122914559918628374}
+  - component: {fileID: 114080835366810332}
   m_Layer: 0
   m_Name: ShieldPickUp_Neon
   m_TagString: ShieldUp
@@ -202,7 +202,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114453481310373348
+--- !u!114 &114080835366810332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

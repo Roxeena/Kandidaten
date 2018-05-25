@@ -805,7 +805,7 @@ MonoBehaviour:
   CountDownRed: {fileID: 1774707667}
   countDown: 1
   repeat: 1
-  gameTime: 0.1
+  gameTime: 2
   countDownTxt: {fileID: 85369186}
   CountDownTime: 3
   Light1: {fileID: 59368184}
@@ -3604,8 +3604,8 @@ MonoBehaviour:
   - {fileID: 355920773}
   prefeb:
   - {fileID: 1153423676690070, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
-  - {fileID: 1383922346332012, guid: 2b2fb9978ea7c724681c7157b888d997, type: 2}
-  - {fileID: 1383922346332012, guid: 677430c5595143c499c90ebf888a9005, type: 2}
+  - {fileID: 1143749318291892, guid: 96a7d308d6b0c8444973bc165390a1c1, type: 2}
+  - {fileID: 1145559255621562, guid: 1ef0d83eb613bcd429b0a9bafcea1abd, type: 2}
   maxCooldown: 20
   minCooldown: 5
 --- !u!114 &1611618101
