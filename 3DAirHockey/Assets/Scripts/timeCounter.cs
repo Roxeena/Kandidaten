@@ -11,11 +11,10 @@ using UnityEngine.UI;
 
 public class timeCounter : MonoBehaviour {
 
-   
-    public Text timerTxt; //create a variable to store text in.
-    public bool countDown = true;
-    public bool repeat = true;
-    public float gameTime = 1.0f; //the length of a game in minutes
+    //Variables
+    public Text timerTxt, countDownBlue, CountDownRed;      //Text elements to show information to user, time left of game, count down in the begining on both sides
+    public bool countDown = true, repeat = true;            //booleans to determine if the times should repeat and if it should count down or not
+    public float gameTime = 1.0f;                           //the length of a game in minutes
     private float minutesLeft; //the minutes left of the game
     private float secondsLeft; //the seconds left of the game
     private string minutes;
@@ -23,8 +22,7 @@ public class timeCounter : MonoBehaviour {
     private float miliSeconds = 0;
 
     public GameObject countDownTxt;
-    public Text countDownBlue;
-    public Text CountDownRed;
+    
     public float CountDownTime = 10;
     private bool restart = true;
 
@@ -124,7 +122,7 @@ public class timeCounter : MonoBehaviour {
                 }
 
                 //Start the countdown
-                if (secondsLeft < 5)
+                if (minutesLeft < 1 && secondsLeft < 5)
                 {
                     countDownTxt.SetActive(true);
 

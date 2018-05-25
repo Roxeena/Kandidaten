@@ -801,12 +801,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTxt: {fileID: 1039748031}
+  countDownBlue: {fileID: 85369188}
+  CountDownRed: {fileID: 1774707667}
   countDown: 1
   repeat: 1
   gameTime: 2
   countDownTxt: {fileID: 85369186}
-  countDownBlue: {fileID: 85369188}
-  CountDownRed: {fileID: 1774707667}
   CountDownTime: 3
   Light1: {fileID: 59368184}
   Light2: {fileID: 1583629720}
@@ -3603,7 +3603,7 @@ MonoBehaviour:
   - {fileID: 149666454}
   - {fileID: 355920773}
   prefeb:
-  - {fileID: 1383922346332012, guid: c3d767ad516627745bf4cea53bdd8f56, type: 2}
+  - {fileID: 1153423676690070, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
   - {fileID: 1383922346332012, guid: 2b2fb9978ea7c724681c7157b888d997, type: 2}
   - {fileID: 1383922346332012, guid: 677430c5595143c499c90ebf888a9005, type: 2}
   maxCooldown: 20

@@ -170,11 +170,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
@@ -194,11 +194,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d3201ca7e4532084c869de497ce2241a, type: 3}
       propertyPath: m_RootOrder
@@ -801,12 +801,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTxt: {fileID: 1039748031}
+  countDownBlue: {fileID: 85369188}
+  CountDownRed: {fileID: 1774707667}
   countDown: 1
   repeat: 1
   gameTime: 2
   countDownTxt: {fileID: 85369186}
-  countDownBlue: {fileID: 85369188}
-  CountDownRed: {fileID: 1774707667}
   CountDownTime: 3
   Light1: {fileID: 1088865739}
   Light2: {fileID: 674873292}
@@ -1198,7 +1198,7 @@ Transform:
   m_LocalScale: {x: 10, y: 50, z: 80}
   m_Children: []
   m_Father: {fileID: 68528912}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &466891941
 MeshRenderer:
@@ -1658,6 +1658,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &599275799
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753421654357060, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153423676690070, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &671736114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2716,7 @@ Transform:
   m_LocalScale: {x: 10, y: 50, z: 80}
   m_Children: []
   m_Father: {fileID: 68528912}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1188567673
 MeshRenderer:
@@ -3840,7 +3886,7 @@ MonoBehaviour:
   - {fileID: 149666454}
   - {fileID: 355920773}
   prefeb:
-  - {fileID: 1383922346332012, guid: c3d767ad516627745bf4cea53bdd8f56, type: 2}
+  - {fileID: 1153423676690070, guid: 5d267fc9cb39a8243af322c1e9162fa7, type: 2}
   - {fileID: 1383922346332012, guid: 2b2fb9978ea7c724681c7157b888d997, type: 2}
   - {fileID: 1383922346332012, guid: 677430c5595143c499c90ebf888a9005, type: 2}
   maxCooldown: 20
