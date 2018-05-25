@@ -805,7 +805,7 @@ MonoBehaviour:
   CountDownRed: {fileID: 1774707667}
   countDown: 1
   repeat: 1
-  gameTime: 2
+  gameTime: 0.1
   countDownTxt: {fileID: 85369186}
   CountDownTime: 3
   Light1: {fileID: 1088865739}
@@ -2125,7 +2125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &969960375
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class Restart : MonoBehaviour {
 
     public void Reload_scene()
     {
+        Time.timeScale = 1;
+
         if (SceneManager.GetActiveScene().name == "Classic")
             SceneManager.LoadScene("Neon");
         if (SceneManager.GetActiveScene().name == "Neon")
