@@ -3875,8 +3875,8 @@ MonoBehaviour:
   - {fileID: 355920773}
   prefeb:
   - {fileID: 1153423676690070, guid: 7a3eacbddfd156c47b3b75e5be6c363f, type: 2}
-  - {fileID: 1707580268773026, guid: b1fb08d42950ae8489091cf458a7a6df, type: 2}
-  - {fileID: 1530187355985730, guid: ff225a710e2fc324ea65297464ba7588, type: 2}
+  - {fileID: 1383922346332012, guid: 3360a4abd27c04d12bd9993c3e1dc0b5, type: 2}
+  - {fileID: 1383922346332012, guid: e8728acca164646f083814b2ccfedf98, type: 2}
   maxCooldown: 20
   minCooldown: 5
 --- !u!114 &1611618101
