@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class timeCounter : MonoBehaviour {
 
     //Variables
-    public Text timerTxt, countDownBlue, CountDownRed;      //Text elements to show information to user, time left of game, count down in the begining on both sides
+    public Text timerTxt, timerTxt2, countDownBlue, CountDownRed;      //Text elements to show information to user, time left of game, count down in the begining on both sides
     public bool countDown = true, repeat = true;            //booleans to determine if the times should repeat and if it should count down or not
     public float gameTime = 1.0f;                           //the length of a game in minutes
     private float minutesLeft; //the minutes left of the game
@@ -41,7 +41,8 @@ public class timeCounter : MonoBehaviour {
     void Start()
     {
         timerTxt.text = "00:00"; //initialize the timer to "0"'
-        if(countDown)
+        timerTxt2.text = timerTxt.text;
+        if (countDown)
         {
             minutesLeft = Mathf.Floor(gameTime); //the time left is initalized to the gameTime
             secondsLeft = (gameTime*60.0f )% 60.0f; //the seconds left are initialized
@@ -52,10 +53,16 @@ public class timeCounter : MonoBehaviour {
             secondsLeft = 0; 
         }
         
-        minutes = minutesLeft.ToString();
-        seconds = secondsLeft.ToString();
-        timerTxt.text = string.Concat(string.Concat(minutes, ":"), seconds);
+        minutes = Mathf.Floor(minutesLeft).ToString();
+        seconds = Mathf.Floor(secondsLeft).ToString();
 
+        if (minutesLeft < 10)
+            minutes = "0" + minutes;
+        if (secondsLeft < 10)
+            seconds = "0" + seconds;
+
+        timerTxt.text = string.Concat(string.Concat(minutes, ":"), seconds);
+        timerTxt2.text = timerTxt.text;
     }
 
     // Update is called once per frame
@@ -88,7 +95,8 @@ public class timeCounter : MonoBehaviour {
                 secondsLeft = 0;
                 minutesLeft = 0;
                 timerTxt.text = "00:00";
-                if(repeat)
+                timerTxt2.text = timerTxt.text;
+                if (repeat)
                 {
                     minutesLeft = Mathf.Floor(gameTime); //the time lis reest to the gameTime
                     secondsLeft = (gameTime * 60.0f) % 60.0f; //the seconds are reset
@@ -104,14 +112,14 @@ public class timeCounter : MonoBehaviour {
             {
                 if (secondsLeft <= 0) //1 minute has passed
                 {
-                    secondsLeft = 60.0f;//reset seconds
+                    secondsLeft = 59.0f;//reset seconds
                     minutesLeft = minutesLeft - 1;//decrement minutes
                 }
 
                 secondsLeft = (secondsLeft - Time.deltaTime) % 60.0f; //the seconds left are calculated
                 
                 minutes = Mathf.Floor(minutesLeft).ToString();
-                seconds = Mathf.Floor(secondsLeft).ToString();
+                seconds = Mathf.Floor(secondsLeft+1).ToString();
                 if (minutesLeft < 10) //add "0" beofre minutes
                 {
                     minutes = string.Concat("0", minutes);
@@ -145,6 +153,7 @@ public class timeCounter : MonoBehaviour {
                 }
 
                 timerTxt.text = string.Concat(string.Concat(minutes, ":"), seconds);     //save the output to the text
+                timerTxt2.text = timerTxt.text;
             }
         }
         else //count up
@@ -154,6 +163,7 @@ public class timeCounter : MonoBehaviour {
                 secondsLeft = 0;
                 minutesLeft = 0;
                 timerTxt.text = "00:00";
+                timerTxt2.text = timerTxt.text;
                 //Send an event/trigger to the game to notify about the end of the round
                 uiManager.ShowRestartCanvas();
             }
@@ -181,6 +191,7 @@ public class timeCounter : MonoBehaviour {
                     }
 
                     timerTxt.text = string.Concat(string.Concat(minutes, ":"), seconds);  //save the output to the text
+                    timerTxt2.text = timerTxt.text;
                 }
                 else // mm:ss
                 {
@@ -196,6 +207,7 @@ public class timeCounter : MonoBehaviour {
                     }
 
                     timerTxt.text = string.Concat(string.Concat(minutes, ":"), seconds);     //save the output to the text
+                    timerTxt2.text = timerTxt.text;
                 }
             }            
         }

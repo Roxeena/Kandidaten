@@ -68,6 +68,7 @@ public class ExpandScript : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+
         //Update the time left on the expands if they are up
         if (RedExpandOn)
         {

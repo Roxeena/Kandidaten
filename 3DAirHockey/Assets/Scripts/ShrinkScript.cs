@@ -68,6 +68,7 @@ public class ShrinkScript : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+
         //Update the time left on the shrinks if they are up
         if (RedShrinkOn)
         {

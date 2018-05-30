@@ -16,6 +16,7 @@ public class ScoreScript : MonoBehaviour {
     }
 
     public Text playerRedTxt, playerBlueTxt;
+    public Text playerRedTxt2, playerBlueTxt2;
 
     public UiManager uiManager;
 
@@ -52,14 +53,21 @@ public class ScoreScript : MonoBehaviour {
     public void Increment(Score whichScore)
     {
         if (whichScore == Score.playerRedScore)
+        {
             playerRedTxt.text = (++playerRedScore).ToString();
+            playerRedTxt2.text = playerRedTxt.text;
+        }
         else
+        {
             playerBlueTxt.text = (++playerBlueScore).ToString();
+            playerBlueTxt2.text = playerBlueTxt.text;
+        }
     }
 
     public void ResetScores()
     {
         playerRedScore = playerBlueScore = 0;
         playerRedTxt.text = playerBlueTxt.text = "0";
+        playerRedTxt2.text = playerBlueTxt2.text = "0";
     }
 }
