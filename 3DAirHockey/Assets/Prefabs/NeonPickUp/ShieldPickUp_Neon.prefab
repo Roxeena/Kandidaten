@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4753421654357060}
   - component: {fileID: 54340746744296288}
   - component: {fileID: 135614132942354414}
-  - component: {fileID: 122914559918628374}
   - component: {fileID: 114080835366810332}
   m_Layer: 0
   m_Name: ShieldPickUp_Neon
@@ -57,6 +56,7 @@ GameObject:
   - component: {fileID: 4694460238292084}
   - component: {fileID: 33124057660477924}
   - component: {fileID: 23156978884033390}
+  - component: {fileID: 122329478554883460}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: ShieldUp
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1142871046956830}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.4, y: 0, z: -0}
+  m_LocalPosition: {x: -0.4, y: 0.1, z: -0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4753421654357060}
@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1486054321134640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.8, y: 0.1, z: 0.8}
   m_Children: []
   m_Father: {fileID: 4753421654357060}
   m_RootOrder: 1
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153423676690070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.4, y: 0.5, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4090863378779590}
@@ -114,7 +114,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -130,7 +129,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -148,12 +146,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a10ba7acccd6eb347bbab80dcb838eed, type: 2}
+  - {fileID: 2100000, guid: 7610d277d8fd022418baaaf7c06047cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -164,7 +161,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -214,17 +210,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
---- !u!122 &122914559918628374
+--- !u!122 &122329478554883460
 Halo:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153423676690070}
+  m_GameObject: {fileID: 1486054321134640}
   m_Enabled: 1
   m_Color:
     serializedVersion: 2
-    rgba: 4294830233
-  m_Size: 0.7
+    rgba: 4294949018
+  m_Size: 0.4
 --- !u!135 &135614132942354414
 SphereCollider:
   m_ObjectHideFlags: 1
